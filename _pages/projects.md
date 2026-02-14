@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects 项目
+title: "<span class='nav-cn'>项目</span><span class='nav-en'>Projects</span>"
 permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
