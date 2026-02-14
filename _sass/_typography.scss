@@ -1,33 +1,40 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * 同步自你的 Rmd style.css 方案
+ * DAWN Lab 最终完整版 (修复标题大小、字体与颜色)
  ******************************************************************************/
 
 @use "variables" as v;
 
 /* ==========================================================================
-   1. 核心正文排备 (同步自 style.css PART 1)
+   1. 核心正文排版 (System Font Stack)
    ========================================================================== */
 body, p, li, span, div, em, strong {
-  /* 使用你 style.css 里的系统原生字体栈 */
+  /* 使用系统原生字体栈 (Mac: 苹方/SF, Win: 微软雅黑/Segoe) */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
   
-  /* 同步 style.css 的排版细节 */
-  line-height: 1.8 !important;      /* 增加行间距，提升长文本阅读舒适度 */
-  letter-spacing: -0.015em !important; /* 微调字间距，更有高级感 */
+  /* 排版细节 */
+  line-height: 1.8 !important;       /* 舒适的行间距 */
+  letter-spacing: -0.015em !important; 
   color: var(--global-text-color);
 }
 
 /* ==========================================================================
-   2. 标题体系 (保留 ZCOOL 艺术感 + 同步 style.css 逻辑)
+   2. 全局标题体系 (默认使用 ZCOOL 小薇体)
    ========================================================================== */
-h1, h2, h3, h4, h5, h6, .navbar-brand, .site-title {
-  /* 标题保留“站酷小薇”作为 Lab 品牌特色，如果想完全一致，可改为上面的系统字体栈 */
+h1, h2, h3, h4, h6, .navbar-brand, .site-title {
   font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
   font-weight: 400 !important;
   color: var(--global-text-color);
   line-height: 1.3 !important;
-  letter-spacing: -0.025em !important; /* 标题字距更紧凑 */
+  letter-spacing: -0.025em !important;
+}
+
+/* ⚠️ 特殊修复：Teaching 页面课程标题使用正文字体 */
+/* 通常课程标题是 h5 或 .card-title，这里强制覆盖回系统字体 */
+h5, .card-title, .teaching-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif !important; 
+  font-weight: 700 !important;       /* 加粗以示区分 */
+  color: var(--global-theme-color) !important; /* 使用主题色 */
 }
 
 /* 链接样式 */
@@ -41,7 +48,40 @@ a, table.table a {
 }
 
 /* ==========================================================================
-   3. 双语导航栏美化 (同步系统字体)
+   3. 内部页面大标题美化 (✅ 找回丢失的部分)
+   ========================================================================== */
+/* 针对所有页面的主标题容器 (Header Title) */
+header .post-title, 
+.post-title {
+  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  display: block;
+}
+
+/* 3.1 标题中的中文：加大、加粗、主题色 */
+header .post-title .nav-cn,
+.post-title .nav-cn {
+  font-size: 3.2rem !important;      /* 霸气大字号 */
+  font-weight: 700 !important;
+  color: var(--global-theme-color) !important; /* 强制普鲁士蓝/粉色 */
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* 3.2 标题中的英文：变小、全大写、灰色 */
+header .post-title .nav-en,
+.post-title .nav-en {
+  font-size: 1.4rem !important;
+  color: #999 !important;            /* 灰色点缀 */
+  font-weight: 300 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase;
+  vertical-align: bottom;            /* 底部对齐汉字 */
+}
+
+/* ==========================================================================
+   4. 双语导航栏美化 (Navbar)
    ========================================================================== */
 .navbar-nav .nav-item .nav-link {
   display: flex !important;
@@ -50,16 +90,14 @@ a, table.table a {
   line-height: 1.2 !important;
 }
 
-.nav-cn {
-  /* 中文部分使用苹方/微软雅黑 */
+.navbar-nav .nav-cn {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   font-size: 1.1rem;
   font-weight: 700;
   display: block;
 }
 
-.nav-en {
-  /* 英文部分使用系统无衬线字体 */
+.navbar-nav .nav-en {
   font-family: -apple-system, sans-serif !important;
   font-size: 0.65rem;
   text-transform: uppercase;
@@ -70,7 +108,7 @@ a, table.table a {
 }
 
 /* ==========================================================================
-   4. 社交图标大小与对齐 (DAWN Lab 整合版)
+   5. 社交图标大小与对齐
    ========================================================================== */
 .social .contact-icons {
   font-size: 1.8rem !important;
@@ -110,19 +148,18 @@ blockquote {
   border-radius: 8px;
   p { margin-bottom: 0; }
 }
-/* =======================================================
-   PEOPLE PAGE STYLES (DAWN Lab 强力修复版)
-   ======================================================= */
 
-/* 1. 核心：强制约束头像容器的宽度 */
-/* 我们不仅要限制 img，还要限制外层的 .profile 容器 */
+/* =======================================================
+   6. PEOPLE PAGE STYLES (成员页面强力修复)
+   ======================================================= */
+/* 限制容器宽度，防止图片撑满屏幕 */
 .profiles .profile {
-  width: 25% !important;        /* 限制容器占页面的比例 */
-  min-width: 150px !important;  /* 保证最小宽度 */
-  max-width: 220px !important;  /* 保证最大宽度，防止它过大 */
+  width: 25% !important;
+  min-width: 150px !important;
+  max-width: 220px !important;
 }
 
-/* 2. 强制图片填满容器并保持比例 */
+/* 强制图片填满容器并保持比例 */
 .profiles .profile img, 
 .profiles .profile .img-fluid,
 .profiles .profile figure {
@@ -133,15 +170,15 @@ blockquote {
   margin-bottom: 10px !important;
 }
 
-/* 3. 头像下方的办公信息微调 */
+/* 头像下方文字 */
 .profiles .profile .more-info {
   font-size: 0.85rem !important;
   line-height: 1.5 !important;
   color: #666 !important;
-  text-align: left !important;  /* 确保地址左对齐 */
+  text-align: left !important;
 }
 
-/* 4. 修复：移动端适配 (当屏幕很小时，让图片居中并恢复宽度) */
+/* 移动端适配 */
 @media (max-width: 576px) {
   .profiles .profile {
     width: 60% !important;
