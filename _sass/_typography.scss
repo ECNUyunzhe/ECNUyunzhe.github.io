@@ -134,3 +134,16 @@ blockquote {
     }
   }
 }
+/* -------------------------------------------------------------------------
+   FORCE FONT OVERRIDE (由 DAWN Lab 设置)
+   使用 !important 强制应用 Noto Sans 字体
+   ------------------------------------------------------------------------- */
+
+body, p, h1, h2, h3, h4, h5, h6, li, span, div, a {
+  font-family: "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 专门针对 About 页面的简介部分 */
+.profile .more-info, .news p, .post-content {
+  font-family: "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
