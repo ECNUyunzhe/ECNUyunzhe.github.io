@@ -463,7 +463,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "teachings-城市数据分析与实践",
           title: '城市数据分析与实践',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/data-science-fundamentals/";
             },},{id: "teachings-introduction-to-machine-learning",
