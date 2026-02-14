@@ -7,7 +7,7 @@ subtitle: >
 
 selected_papers: false 
 
-social: false 
+social: true 
 
 announcements:
   enabled: false # ❌ 已关闭公告/新闻
