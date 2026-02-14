@@ -6,7 +6,7 @@ subtitle: Associate Professor. Institute of Population Research, School of Socia
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 1寸2.jpg
   image_circular: true # ✅ 已改为圆形
   more_info: >
     <p>Room 508, Law and Business Building (North)</p>
