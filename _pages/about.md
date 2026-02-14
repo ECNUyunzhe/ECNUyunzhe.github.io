@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: Home 主页
 permalink: /
 subtitle: >
     <p>Data Analytics for Well-being & Neighborhoods</p>
