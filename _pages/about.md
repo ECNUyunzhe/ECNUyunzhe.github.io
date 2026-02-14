@@ -2,7 +2,10 @@
 layout: about
 title: about
 permalink: /
-subtitle: Associate Professor. Institute of Population Research, School of Social Development, East China Normal University.
+subtitle: >
+<p>Associate Professor in Demography</p>
+<p>School of Social Development</p> 
+<p>East China Normal University</p> 
 
 profile:
   align: right
