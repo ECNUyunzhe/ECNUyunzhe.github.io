@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: "<span class='nav-cn'>成员</span><span class='nav-en'>People</span>"
-description: members of the lab or group
+description: Members of the group
 nav: true
 nav_order: 7
 
