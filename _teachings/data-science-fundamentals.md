@@ -1,13 +1,13 @@
 ---
 layout: course
-title: Data Science Fundamentals
+title: 城市数据分析与实践
 description: This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.
-instructor: Prof. Data
-year: 2024
+instructor: Dr. Yunzhe Liu
+year: 2026
 term: Spring
-location: Science Building, Room 202
-time: Mondays and Wednesdays, 2:00-3:30 PM
-course_id: data-science-fundamentals
+location: 闵一教 226
+time: Mondays, 9:50-11:25 AM
+course_id: SOCI3312 
 schedule:
   - week: 1
     date: Feb 5
