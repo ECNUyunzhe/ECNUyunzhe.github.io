@@ -197,3 +197,35 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .site-title {
     margin-top: 0;
   }
 }
+
+/* =======================================================
+   SOCIAL ICONS RESIZING (下方社交图标大小调整)
+   ======================================================= */
+
+/* 1. 控制 FontAwesome 学术图标的大小 (CV, 邮件, LinkedIn, Scholar 等) */
+.social .contact-icons {
+  font-size: 2rem !important;      /* 默认可能很大，建议改为 1.5rem ~ 2rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;                    /* 图标之间的间距 */
+  margin-top: 2rem;
+}
+
+/* 2. 专门控制那个“小头像”图标的大小 (比如现在的爱因斯坦图) */
+.social .contact-icons .icon img, 
+.social .contact-icons a img {
+  width: 35px !important;         /* 宽度调小 */
+  height: 35px !important;        /* 高度调小 */
+  margin: 0 !important;           /* 去掉图片自带的边距 */
+  border-radius: 50%;             /* 如果你想让它变圆，可以保留这行 */
+  box-shadow: none !important;    /* 去掉阴影，让它看起来更像一个图标 */
+  vertical-align: middle;
+}
+
+/* 3. 鼠标悬停时的微调 */
+.social .contact-icons a:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+  color: var(--global-theme-color) !important; /* 悬停时变为主题色 */
+}
