@@ -153,3 +153,47 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .site-title {
 .profile .more-info {
   font-family: "Noto Sans", "Noto Sans SC", sans-serif !important;
 }
+/* =======================================================
+   BILINGUAL NAVBAR STYLES (双语导航栏美化)
+   ======================================================= */
+
+/* 1. 导航链接的容器设为 Flex，方便对齐 */
+.navbar-nav .nav-item .nav-link {
+  display: flex !important;
+  flex-direction: column;      /* 上下排列 (如果不喜欢上下，改成 row 就是左右) */
+  align-items: center;         /* 居中对齐 */
+  line-height: 1.2 !important; /*以此控制行高*/
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* 2. 中文部分样式 (大、粗) */
+.nav-cn {
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.1rem;      /* 字体调大 */
+  font-weight: 700;       /* 加粗 */
+  display: block;
+}
+
+/* 3. 英文部分样式 (小、全大写、做装饰) */
+.nav-en {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.65rem;     /* 字体变小 */
+  text-transform: uppercase; /* 强制全大写 (HOME) */
+  font-weight: 600;       /* 稍微粗一点 */
+  opacity: 0.7;           /* 稍微透明一点，形成层次感 */
+  letter-spacing: 1px;    /* 字母间距拉开一点 */
+  margin-top: -2px;       /* 稍微往上提一点，紧凑 */
+}
+
+/* 手机端适配：手机上可能显示不下，可以改成左右排列 */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item .nav-link {
+    flex-direction: row;
+    gap: 8px;
+    align-items: baseline;
+  }
+  .nav-en {
+    margin-top: 0;
+  }
+}
