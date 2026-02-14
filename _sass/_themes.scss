@@ -6,30 +6,37 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #{v.$white-color};
-  --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$purple-color};
-  --global-hover-color: #{v.$purple-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-dark};
-  --global-footer-text-color: #{v.$grey-color-light};
-  --global-footer-link-color: #{v.$white-color};
-  --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{v.$white-color};
-  --global-highlight-color: #{v.$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$black-color, "red", v.$space: rgb)},
-    #{color.channel(v.$black-color, "green", v.$space: rgb)},
-    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
-    0.4
-  );
-  --global-back-to-top-text-color: #{v.$white-color};
-  --global-newsletter-bg-color: #{v.$white-color};
-  --global-newsletter-text-color: #{v.$black-color};
 
+  /* ========================================================================
+     LIGHT MODE (基于你的 style.css Part 1)
+     背景: #FAFAFA | 普鲁士蓝: #003153 | 链接蓝: #007AFF
+     ======================================================================== */
+  --global-bg-color: #FAFAFA;                       /* Body 背景 */
+  --global-code-bg-color: #f6f8fa;                  /* 代码块背景 */
+  --global-text-color: #333333;                     /* 正文文字 */
+  --global-text-color-light: #828282;               /* 辅助文字 */
+  
+  --global-theme-color: #003153;                    /* 主题色：普鲁士蓝 (用于标题/导航) */
+  --global-hover-color: #007AFF;                    /* 悬停/链接色：亮蓝 */
+  --global-hover-text-color: #ffffff;
+  
+  --global-footer-bg-color: #FAFAFA;                /* 页脚背景 (与Body一致，透明感) */
+  --global-footer-text-color: #999999;              /* 页脚文字 */
+  --global-footer-link-color: #003153;              /* 页脚链接 */
+  
+  --global-distill-app-color: #828282;
+  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-card-bg-color: #ffffff;                  /* 卡片背景 */
+  
+  --global-highlight-color: #d9534f;                /* 高亮色 (Red) */
+  
+  --global-back-to-top-bg-color: rgba(0, 49, 83, 0.4); /* 普鲁士蓝半透明 */
+  --global-back-to-top-text-color: #ffffff;
+
+  --global-newsletter-bg-color: #ffffff;
+  --global-newsletter-text-color: #333333;
+
+  /* 提示块颜色 (保持默认或微调) */
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
@@ -76,29 +83,36 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
-  --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
-  --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{v.$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$white-color, "red", v.$space: rgb)},
-    #{color.channel(v.$white-color, "green", v.$space: rgb)},
-    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
-    0.5
-  );
-  --global-back-to-top-text-color: #{v.$black-color};
-  --global-newsletter-bg-color: #{v.$grey-color-light};
-  --global-newsletter-text-color: #{v.$grey-color-dark};
 
+  /* ========================================================================
+     DARK MODE (基于你的 style.css Part 7 - Blackpink Edition)
+     背景: #202124 | 樱花粉: #FF9EBF | 热粉: #FF6699
+     ======================================================================== */
+  --global-bg-color: #202124;                       /* ChatGPT 风格深灰背景 */
+  --global-code-bg-color: #2B2D31;                  /* 代码块深灰 */
+  --global-text-color: #E8EAED;                     /* 正文浅灰 */
+  --global-text-color-light: #B0B0B0;               /* 辅助灰 */
+  
+  --global-theme-color: #FF9EBF;                    /* 主题色：樱花粉 */
+  --global-hover-color: #FF6699;                    /* 悬停/高亮：热粉色 */
+  --global-hover-text-color: #121212;               /* 悬停文字反色 (黑) */
+  
+  --global-footer-bg-color: #202124;                /* 页脚背景 */
+  --global-footer-text-color: #999999;
+  --global-footer-link-color: #FF9EBF;
+  
+  --global-distill-app-color: #E0E0E0;
+  --global-divider-color: #424246;
+  
+  --global-card-bg-color: #1E1E1E;                  /* 卡片背景 (哑光黑) */
+  
+  --global-back-to-top-bg-color: rgba(255, 158, 191, 0.5); /* 樱花粉半透明 */
+  --global-back-to-top-text-color: #121212;
+
+  --global-newsletter-bg-color: #1E1E1E;
+  --global-newsletter-text-color: #E8EAED;
+
+  /* 提示块适配深色 */
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
   --global-tip-block-text: #beffe2;
@@ -154,6 +168,7 @@ html[data-theme-setting="light"] {
   }
 }
 
+/* 这是一个漂亮的日月切换图标样式，保留即可 */
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;
