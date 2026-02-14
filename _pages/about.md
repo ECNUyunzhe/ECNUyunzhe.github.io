@@ -11,6 +11,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # ✅ 已改为圆形
+  width: 20%
   more_info: >
     <p>Room 508, Law and Business Building (North)</p>
     <p>500 Dongchuan Road</p>
