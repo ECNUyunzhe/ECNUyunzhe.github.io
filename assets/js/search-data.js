@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-lt-span-class-39-nav-cn-39-gt-成果-lt-span-gt-lt-span-class-39-nav-en-39-gt-publications-lt-span-gt",
           title: "&lt;span class=&#39;nav-cn&#39;&gt;成果&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Publications&lt;/span&gt;",
-          description: "代表学术成果",
+          description: "代表性学术成果",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
