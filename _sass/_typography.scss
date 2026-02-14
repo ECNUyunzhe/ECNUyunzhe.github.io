@@ -199,33 +199,43 @@ h1, h2, h3, h4, h5, h6, .navbar-brand, .site-title {
 }
 
 /* =======================================================
-   SOCIAL ICONS RESIZING (下方社交图标大小调整)
+   SOCIAL ICONS RESIZING (DAWN Lab 最终整合版)
    ======================================================= */
 
-/* 1. 控制 FontAwesome 学术图标的大小 (CV, 邮件, LinkedIn, Scholar 等) */
+/* 1. 全局容器：控制图标整体间距、位置和基准大小 */
 .social .contact-icons {
-  font-size: 2rem !important;      /* 默认可能很大，建议改为 1.5rem ~ 2rem */
+  font-size: 1.8rem !important;      /* 调至 1.8rem 更加精致，不像“巨无霸” */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;                    /* 图标之间的间距 */
+  gap: 1.2rem;                       /* 缩减间距，让图标布局更紧凑 */
   margin-top: 2rem;
 }
 
-/* 2. 专门控制那个“小头像”图标的大小 (比如现在的爱因斯坦图) */
-.social .contact-icons .icon img, 
-.social .contact-icons a img {
-  width: 35px !important;         /* 宽度调小 */
-  height: 35px !important;        /* 高度调小 */
-  margin: 0 !important;           /* 去掉图片自带的边距 */
-  border-radius: 50%;             /* 如果你想让它变圆，可以保留这行 */
-  box-shadow: none !important;    /* 去掉阴影，让它看起来更像一个图标 */
-  vertical-align: middle;
+/* 2. 专门针对 ORCID 等学术图标 (Academicons) 的修正 */
+/* 解决这些图标经常比 FontAwesome 图标位置偏下或偏小的问题 */
+.social .contact-icons .ai {
+  vertical-align: middle !important;
+  line-height: 1;
 }
 
-/* 3. 鼠标悬停时的微调 */
-.social .contact-icons a:hover {
-  transform: scale(1.1);
+/* 3. 图片图标强制统一 (微信二维码图标、自定义 Logo) */
+.social .contact-icons .icon img, 
+.social .contact-icons a img {
+  width: 32px !important;            /* 32px 在视觉上等同于 1.8rem 的字体图标 */
+  height: 32px !important;
+  margin: 0 !important;
+  border-radius: 4px;                /* 微信/图片图标改用 4px 微圆角，比圆形更好看 */
+  box-shadow: none !important;
+  vertical-align: middle;
+  filter: none !important;           /* ⚠️ 核心修复：防止深色模式下二维码变色导致无法扫码 */
   transition: transform 0.2s ease;
-  color: var(--global-theme-color) !important; /* 悬停时变为主题色 */
+}
+
+/* 4. 鼠标悬停时的动态效果 */
+.social .contact-icons a:hover {
+  transform: scale(1.15);            /* 稍微加大缩放感，更有交互感 */
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--global-theme-color) !important; /* 悬停变为你刚才设置的普鲁士蓝或粉色 */
+  text-decoration: none !important;
 }
