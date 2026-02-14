@@ -2,7 +2,7 @@
 layout: page
 title: "<span class='nav-cn'>项目</span><span class='nav-en'>Projects</span>"
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: 科研项目 Research Projects
 nav: true
 nav_order: 3
 display_categories: [work, fun]
