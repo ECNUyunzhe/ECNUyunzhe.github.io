@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: "<span class='nav-cn'>教学</span><span class='nav-en'>Teaching</span>"
-description: Course materials and resources for classes taught.
+description: 课程与课程材料
 nav: true
 nav_order: 6
 calendar: false
