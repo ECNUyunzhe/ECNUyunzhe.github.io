@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "<span class='nav-cn'>项目</span><span class='nav-en'>Projects</span>"
+title: "<span class='nav-cn'>项目</span><span style='margin:0 10px; color:var(--global-text-color)'>·</span><span class='nav-en'>PROJECTS</span>"
 permalink: /projects/
 description: 科研项目 Research Projects
 nav: true
