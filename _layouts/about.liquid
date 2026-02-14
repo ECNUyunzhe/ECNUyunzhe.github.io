@@ -6,9 +6,10 @@ layout: default
     <h1 class="post-title">
       <span class="nav-cn">破晓</span>
       
-      <span style="font-family: 'ZCOOL XiaoWei', serif; margin-left: 10px;">DAWN</span>
+      <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
       
-      </h1>
+      <span class="nav-en">DAWN</span>
+    </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
 
@@ -20,11 +21,9 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
