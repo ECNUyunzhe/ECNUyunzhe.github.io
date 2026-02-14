@@ -3,20 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-    <p>Associate Professor in Demography</p>
-    <p>School of Social Development</p> 
-    <p>East China Normal University</p> 
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: true # ✅ 已改为圆形
-  width: 20%
-  more_info: >
-    <p>Room 508, Law and Business Building (North)</p>
-    <p>500 Dongchuan Road</p>
-    <p>East China Normal University</p>
-    <p>Shanghai, China</p>
+    <p>Data Analytics for Well-being & Neighborhoods</p>
 
 selected_papers: false 
 
