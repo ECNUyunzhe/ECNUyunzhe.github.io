@@ -17,7 +17,7 @@ profile:
     <p>East China Normal University</p>
     <p>Shanghai, China</p>
 
-selected_papers: true # ✅ 保留精选论文
+selected_papers: false 
 
 social: true 
 
