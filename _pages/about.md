@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
     <p>Data Analytics for Well-being & Neighborhoods</p>
