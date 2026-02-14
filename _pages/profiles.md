@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: "<span class='nav-cn'>成员</span><span style='margin:0 10px; color:var(--global-text-color)'>·</span><span class='nav-en'>PEOPLE</span>"
+title: "<span class='nav-cn'>成员</span><span class='nav-en'>PEOPLE</span>"
 description: Members of the group
 nav: true
 nav_order: 7
