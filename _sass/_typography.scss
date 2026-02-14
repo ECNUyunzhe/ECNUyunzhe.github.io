@@ -161,41 +161,41 @@ blockquote {
 }
 
 /* =======================================================
-   6. PEOPLE PAGE STYLES (成员页面强力修复)
+   PEOPLE PAGE STYLES (DAWN Lab 最终修复版)
    ======================================================= */
-/* 1. 限制容器宽度，防止图片撑满屏幕 */
-.profiles .profile {
-  width: 25% !important;        /* 限制为页面宽度的 1/4 */
-  min-width: 150px !important;
-  max-width: 220px !important;  /* 最大不超过 220px */
+
+/* 1. 精准定位：只针对拥有 people-profile 类的容器 */
+.people-profile {
+  width: 30% !important;          /* 限制容器宽度 */
+  max-width: 200px !important;    /* 限制最大宽度 (这就是你要的变小！) */
+  min-width: 150px !important;    /* 限制最小宽度 */
+  margin-bottom: 20px !important; /* 底部留点空隙 */
 }
 
-/* 2. 强制图片填满这个被限制的容器 */
-.profiles .profile img, 
-.profiles .profile .img-fluid,
-.profiles .profile figure {
+/* 2. 这里的 float-left/right 是由 Liquid 动态生成的，我们给它加点边距 */
+.people-profile.float-right {
+  margin-left: 20px !important;   /* 图片在右，文字在左，给左边留空隙 */
+}
+
+.people-profile.float-left {
+  margin-right: 20px !important;  /* 图片在左，文字在右，给右边留空隙 */
+}
+
+/* 3. 强制内部图片填满这个被限制的容器 */
+.people-profile img {
   width: 100% !important;
-  height: auto !important;
   max-width: 100% !important;
-  border-radius: 8px !important;
-  margin-bottom: 10px !important;
+  height: auto !important;
+  border-radius: 8px !important;  /* 圆角 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
 }
 
-/* 3. 头像下方文字 */
-.profiles .profile .more-info {
+/* 4. 办公信息文字微调 */
+.people-profile .more-info {
   font-size: 0.85rem !important;
-  line-height: 1.5 !important;
-  color: #666 !important;
-  text-align: left !important;
-}
-
-/* 4. 移动端适配 */
-@media (max-width: 576px) {
-  .profiles .profile {
-    width: 60% !important;
-    float: none !important;
-    margin: 0 auto 20px auto !important;
-  }
+  line-height: 1.4 !important;
+  margin-top: 10px !important;
+  color: #666;
 }
 /* =======================================================
    COURSE PAGE TITLE (课程页面标题修复)
