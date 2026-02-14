@@ -1,29 +1,27 @@
 # -----------------------------------------------------------------------------
-# Social Media Links
+# DAWN Lab 社交图标配置
 # -----------------------------------------------------------------------------
 
-# 1. 你的邮箱 (已添加)
+# 1. 邮件 (图标会自动变为信封)
 email: yzliu@soci.ecnu.edu.cn
 
-# 2. Google Scholar (已添加)
+# 2. Google Scholar (图标会自动变为学术帽)
 scholar_userid: vR-ZpaEAAAAJ
 
-# 3. ORCID (模板自带图标，请把下面的 0000... 换成你真实的 ID)
+# 3. ORCID (图标会自动变为绿色的 iD 圆圈)
 orcid_id: 0000-0002-7189-3323
 
-# 4. 微信二维码 (步骤见下文)
-# 请确保你的二维码图片名字叫 wechat.jpg (或者 png)，并且放在 assets/img/ 文件夹里
-wechat_qr: wechat.jpg
-
-# 5. 其他学术链接 (如 ResearchGate, LinkedIn 等，需要时去掉 # 号填入)
-# research_gate_profile: your_profile_name
-# linkedin_username: your_username
+# 4. GitHub (图标会自动变为小猫)
 github_username: ECNUyunzhe
 
+# 5. 微信二维码 (图标会自动变为微信 logo)
+# ⚠️ 注意：必须确保 assets/img/ 文件夹里有一个叫 wechat.jpg 的文件
+# wechat_qr: wechat.jpg
+
 # -----------------------------------------------------------------------------
-# 下面是你要求隐藏的项目 (已注释，不会显示)
+# 以下是隐藏项（确保前面有 # 号，或者直接删掉）
 # -----------------------------------------------------------------------------
 # cv_pdf: /assets/pdf/example_pdf.pdf
-# inspirehep_id: 1010907
+# linkedin_username: ...
 # rss_icon: true
-# custom_social: ... (已删除)
+# inspirehep_id: ...
