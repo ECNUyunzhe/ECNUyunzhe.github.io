@@ -1,7 +1,7 @@
 ---
 layout: course
 title: 城市数据分析与实践
-description: This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.
+description:
 instructor: Dr. Yunzhe Liu
 year: 2026
 term: Spring
