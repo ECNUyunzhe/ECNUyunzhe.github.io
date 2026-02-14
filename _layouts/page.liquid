@@ -24,6 +24,11 @@ layout: default
         <span class="nav-cn">教学</span>
         <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
         <span class="nav-en">TEACHING</span>
+      
+      {% elsif page.permalink == '/people/' %}
+        <span class="nav-cn">成员</span>
+        <span style="margin: 0 10px; color: var(--global-text-color);">·</span>
+        <span class="nav-en">PEOPLE</span>
 
       {% else %}
         {{ page.title }}
