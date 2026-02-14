@@ -20,8 +20,12 @@ latest_posts:
   limit: 3 
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+**DAWN(Data Analytics for Well-being & Neighborhoods)** 研究组，由华东师范大学社会发展学院人口研究所**刘贇喆副教授**于2025年发起成立。
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+本课题组立足于**社会学、人口学、地理学、公共健康与城市计算**等学科交叉前沿，致力于利用**多源城市时空数据**与**地理人工智能技术**（GeoAI），深入解析城市复杂系统中的**社会空间分异**与**不平等**模式；旨在通过**数据驱动**的实证研究，为理解城市社会系统的演化规律与推动可持续发展，提供科学的、**以人为本**的**循证依据**。
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+---
+
+The **DAWN (Data Analytics for Well-being & Neighborhoods)** Research Group was established in 2025 by Associate Professor **Yunzhe Liu** at the Institute of Population Research, School of Social Development, **East China Normal University**.
+
+Positioned at the cutting-edge intersection of **Sociology, Demography, Geography, Public Health, and Urban Computing**, the group is dedicated to utilising **multi-source urban spatio-temporal data** and **Geo-spatial artificial intelligence** to deeply analyse the patterns of **socio-spatial disparities** and **inequality** within complex urban systems. Through **data-driven** empirical research, the group aims to provide a **scientific, human-centric, and evidence-based foundation** for understanding urban evolution and promoting sustainable development.
