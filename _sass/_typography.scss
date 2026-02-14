@@ -1,6 +1,7 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab 最终完整版 (修复标题大小、字体与颜色)
+ * DAWN Lab Final V3: 破晓全能版
+ * (含 Teaching 修复、Tab 标题自适应、成员头像锁定)
  ******************************************************************************/
 
 @use "variables" as v;
@@ -12,16 +13,17 @@ body, p, li, span, div, em, strong {
   /* 使用系统原生字体栈 (Mac: 苹方/SF, Win: 微软雅黑/Segoe) */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
   
-  /* 排版细节 */
-  line-height: 1.8 !important;       /* 舒适的行间距 */
+  /* 排版细节：增加行距提升阅读体验 */
+  line-height: 1.8 !important;       
   letter-spacing: -0.015em !important; 
   color: var(--global-text-color);
 }
 
 /* ==========================================================================
-   2. 全局标题体系 (默认使用 ZCOOL 小薇体)
+   2. 全局标题体系 (H1-H6 默认小薇体)
    ========================================================================== */
 h1, h2, h3, h4, h6, .navbar-brand, .site-title {
+  /* 默认让标题都带点“书法感” */
   font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
   font-weight: 400 !important;
   color: var(--global-text-color);
@@ -29,12 +31,12 @@ h1, h2, h3, h4, h6, .navbar-brand, .site-title {
   letter-spacing: -0.025em !important;
 }
 
-/* ⚠️ 特殊修复：Teaching 页面课程标题使用正文字体 */
-/* 通常课程标题是 h5 或 .card-title，这里强制覆盖回系统字体 */
+/* ⚠️ 核心修复：Teaching 页面课程标题使用正文字体 (不要艺术体) */
+/* 涵盖 h5 (通常用于课程名), .card-title, 以及可能的教学标题类 */
 h5, .card-title, .teaching-title {
   font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif !important; 
-  font-weight: 700 !important;       /* 加粗以示区分 */
-  color: var(--global-theme-color) !important; /* 使用主题色 */
+  font-weight: 700 !important;       /* 加粗，显正式 */
+  color: var(--global-theme-color) !important; /* 颜色跟随主题(蓝/粉) */
 }
 
 /* 链接样式 */
@@ -48,41 +50,45 @@ a, table.table a {
 }
 
 /* ==========================================================================
-   3. 内部页面大标题美化 (✅ 找回丢失的部分)
+   3. 页面大标题美化 (Tab 页点开后的 Title)
    ========================================================================== */
-/* 针对所有页面的主标题容器 (Header Title) */
+/* 针对所有页面的主标题容器 */
 header .post-title, 
 .post-title {
-  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   display: block;
 }
 
-/* 3.1 标题中的中文：加大、加粗、主题色 */
+/* 3.1 标题中的中文 (如“破晓”、“成果”)：【标准黑体 + 主题色】 */
+/* 这里的颜色会自动变成 普鲁士蓝(Light) 或 樱花粉(Dark) */
 header .post-title .nav-cn,
 .post-title .nav-cn {
-  font-size: 3.2rem !important;      /* 霸气大字号 */
-  font-weight: 700 !important;
-  color: var(--global-theme-color) !important; /* 强制普鲁士蓝/粉色 */
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important; 
+  font-size: 3.2rem !important;      
+  font-weight: 700 !important;       
+  color: var(--global-theme-color) !important; 
   display: inline-block;
   margin-right: 20px;
 }
 
-/* 3.2 标题中的英文：变小、全大写、灰色 */
+/* 3.2 标题中的英文 (如“PUBLICATIONS”)：【小薇体 + 主题色】 */
 header .post-title .nav-en,
 .post-title .nav-en {
-  font-size: 1.4rem !important;
-  color: #999 !important;            /* 灰色点缀 */
-  font-weight: 300 !important;
-  letter-spacing: 3px !important;
-  text-transform: uppercase;
-  vertical-align: bottom;            /* 底部对齐汉字 */
+  font-family: "ZCOOL XiaoWei", serif !important; 
+  font-size: 2.2rem !important;      
+  font-weight: 400 !important;
+  color: var(--global-theme-color) !important; 
+  letter-spacing: 1px !important;
+  text-transform: uppercase;         
+  vertical-align: middle;            
 }
 
+
 /* ==========================================================================
-   4. 双语导航栏美化 (Navbar)
+   4. 双语导航栏美化 (Navbar Menu)
    ========================================================================== */
+/* 导航栏容器 */
 .navbar-nav .nav-item .nav-link {
   display: flex !important;
   flex-direction: column;
@@ -90,6 +96,7 @@ header .post-title .nav-en,
   line-height: 1.2 !important;
 }
 
+/* 导航栏中文 */
 .navbar-nav .nav-cn {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   font-size: 1.1rem;
@@ -97,6 +104,7 @@ header .post-title .nav-en,
   display: block;
 }
 
+/* 导航栏英文 */
 .navbar-nav .nav-en {
   font-family: -apple-system, sans-serif !important;
   font-size: 0.65rem;
@@ -119,8 +127,10 @@ header .post-title .nav-en,
   margin-top: 2rem;
 }
 
+/* 修正学术图标(ORCID等)的垂直对齐 */
 .social .contact-icons .ai { vertical-align: middle !important; }
 
+/* 修正图片图标(微信/自定义)的大小和颜色 */
 .social .contact-icons .icon img, 
 .social .contact-icons a img {
   width: 32px !important;
@@ -129,9 +139,10 @@ header .post-title .nav-en,
   border-radius: 4px;
   box-shadow: none !important;
   vertical-align: middle;
-  filter: none !important;
+  filter: none !important; /* 防止深色模式下二维码变色 */
 }
 
+/* 悬停动效 */
 .social .contact-icons a:hover {
   transform: scale(1.15);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -152,14 +163,14 @@ blockquote {
 /* =======================================================
    6. PEOPLE PAGE STYLES (成员页面强力修复)
    ======================================================= */
-/* 限制容器宽度，防止图片撑满屏幕 */
+/* 1. 限制容器宽度，防止图片撑满屏幕 */
 .profiles .profile {
-  width: 25% !important;
+  width: 25% !important;        /* 限制为页面宽度的 1/4 */
   min-width: 150px !important;
-  max-width: 220px !important;
+  max-width: 220px !important;  /* 最大不超过 220px */
 }
 
-/* 强制图片填满容器并保持比例 */
+/* 2. 强制图片填满这个被限制的容器 */
 .profiles .profile img, 
 .profiles .profile .img-fluid,
 .profiles .profile figure {
@@ -170,7 +181,7 @@ blockquote {
   margin-bottom: 10px !important;
 }
 
-/* 头像下方文字 */
+/* 3. 头像下方文字 */
 .profiles .profile .more-info {
   font-size: 0.85rem !important;
   line-height: 1.5 !important;
@@ -178,7 +189,7 @@ blockquote {
   text-align: left !important;
 }
 
-/* 移动端适配 */
+/* 4. 移动端适配 */
 @media (max-width: 576px) {
   .profiles .profile {
     width: 60% !important;
