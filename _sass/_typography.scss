@@ -147,3 +147,28 @@ blockquote {
   margin-bottom: 2rem !important;
   opacity: 0.8;
 }
+/* =======================================================
+   PEOPLE PAGE STYLES (成员页面样式优化)
+   ======================================================= */
+
+/* 1. 限制头像图片的宽度，不再让它占满半个屏幕 */
+.profile img {
+  max-width: 180px !important; /* 调整此数值可以控制图片大小 */
+  height: auto !important;
+  margin-bottom: 1rem !important;
+  border-radius: 8px !important; /* 给照片加一点圆角，更现代 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* 2. 调整头像下方的文字大小（办公地址等） */
+.profile .more-info {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  color: var(--global-text-color-light) !important;
+}
+
+/* 3. 增加简介文本的对齐美感 */
+.profile .post-content {
+  text-align: justify;
+  font-size: 1rem;
+}
