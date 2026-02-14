@@ -1,6 +1,6 @@
 ---
 layout: course
-title: 城市数据分析与实践
+title: "<span class='course-title'>城市数据分析与实践</span>"
 description:
 instructor: Dr. Yunzhe Liu
 year: 2026
