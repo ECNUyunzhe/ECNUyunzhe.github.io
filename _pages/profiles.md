@@ -9,7 +9,7 @@ nav_order: 7
 profiles:
   - align: right
     image: prof_pic.jpg
-    content: about_liuyunzhe.md  # 关联我们刚才创建的文件
+    content: about_yunzhe.md  # 关联我们刚才创建的文件
     image_circular: false
     more_info: >
       <p><b>办公地点：</b></p>
