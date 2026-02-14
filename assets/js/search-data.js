@@ -9,8 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-lt-span-class-39-nav-cn-39-gt-成果-lt-span-gt-lt-span-class-39-nav-en-39-gt-publications-lt-span-gt",
-          title: "&lt;span class=&#39;nav-cn&#39;&gt;成果&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Publications&lt;/span&gt;",
+  },{id: "nav-lt-span-class-39-nav-cn-39-gt-成果-lt-span-gt-lt-span-style-39-margin-0-10px-color-var-global-text-color-39-gt-lt-span-gt-lt-span-class-39-nav-en-39-gt-publications-lt-span-gt",
+          title: "&lt;span class=&#39;nav-cn&#39;&gt;成果&lt;/span&gt;&lt;span style=&#39;margin:0 10px; color:var(--global-text-color)&#39;&gt;·&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;PUBLICATIONS&lt;/span&gt;",
           description: "代表性学术成果",
           section: "Navigation",
           handler: () => {
