@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-lt-span-class-39-nav-cn-39-gt-教学-lt-span-gt-lt-span-class-39-nav-en-39-gt-teaching-lt-span-gt",
           title: "&lt;span class=&#39;nav-cn&#39;&gt;教学&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Teaching&lt;/span&gt;",
-          description: "Course materials and resources for classes taught.",
+          description: "课程与课程材料",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
