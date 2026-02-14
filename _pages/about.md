@@ -26,6 +26,6 @@ latest_posts:
 
 ---
 
-The **DAWN (Data Analytics for Well-being & Neighborhoods)** Research Group was established in 2025 by Associate Professor **Yunzhe Liu** at the Institute of Population Research, School of Social Development, **East China Normal University**.
+The **DAWN** Research Group was established in 2025 by Associate Professor **Yunzhe Liu** at the Institute of Population Research, School of Social Development, **East China Normal University**.
 
 Positioned at the cutting-edge intersection of **Computational social science, Demography, Geography, Public Health, and Urban planning**, the group is dedicated to utilising **multi-source urban spatio-temporal data** and **Geo-spatial artificial intelligence** to deeply analyse the patterns of **socio-spatial disparities** and **inequality** within complex urban systems. Through **data-driven** empirical research, the group aims to provide a **scientific, human-centric, and evidence-based foundation** for understanding urban evolution and promoting sustainable development.
