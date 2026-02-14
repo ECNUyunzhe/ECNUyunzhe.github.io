@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: "<span class='nav-cn'>成果</span><span style='margin:0 10px; color:var(--global-text-color)'>·</span><span class='nav-en'>PUBLICATIONS</span>"
+title: "<span class='nav-cn'>成果</span><span class='nav-en'>Publications</span>"
 description: 代表性学术成果
 nav: true
 nav_order: 2
