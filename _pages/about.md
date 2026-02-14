@@ -2,10 +2,10 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
-<p>Associate Professor in Demography</p>
-<p>School of Social Development</p> 
-<p>East China Normal University</p> 
+subtitle: >
+    <p>Associate Professor in Demography</p>
+    <p>School of Social Development</p> 
+    <p>East China Normal University</p> 
 
 profile:
   align: right
