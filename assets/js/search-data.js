@@ -23,8 +23,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-lt-span-class-39-nav-cn-39-gt-教学-lt-span-gt-lt-span-style-39-margin-0-10px-color-var-global-text-color-39-gt-lt-span-gt-lt-span-class-39-nav-en-39-gt-teaching-lt-span-gt",
-          title: "&lt;span class=&#39;nav-cn&#39;&gt;教学&lt;/span&gt;&lt;span style=&#39;margin:0 10px; color:var(--global-text-color)&#39;&gt;·&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;TEACHING&lt;/span&gt;",
+        },{id: "nav-lt-span-class-39-nav-cn-39-gt-教学-lt-span-gt-lt-span-class-39-nav-en-39-gt-teaching-lt-span-gt",
+          title: "&lt;span class=&#39;nav-cn&#39;&gt;教学&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Teaching&lt;/span&gt;",
           description: "课程与课程材料",
           section: "Navigation",
           handler: () => {
