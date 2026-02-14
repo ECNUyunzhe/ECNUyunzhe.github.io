@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: >
+subtitle: 
 <p>Associate Professor in Demography</p>
 <p>School of Social Development</p> 
 <p>East China Normal University</p> 
