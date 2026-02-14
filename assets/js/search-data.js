@@ -16,9 +16,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-lt-span-class-39-nav-cn-39-gt-项目-lt-span-gt-lt-span-style-39-margin-0-10px-color-var-global-text-color-39-gt-lt-span-gt-lt-span-class-39-nav-en-39-gt-projects-lt-span-gt",
-          title: "&lt;span class=&#39;nav-cn&#39;&gt;项目&lt;/span&gt;&lt;span style=&#39;margin:0 10px; color:var(--global-text-color)&#39;&gt;·&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;PROJECTS&lt;/span&gt;",
-          description: "科研项目 Research Projects",
+        },{id: "nav-lt-span-class-39-nav-cn-39-gt-项目-lt-span-gt-lt-span-class-39-nav-en-39-gt-projects-lt-span-gt",
+          title: "&lt;span class=&#39;nav-cn&#39;&gt;项目&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Projects&lt;/span&gt;",
+          description: "科研项目与方向 Research Projects &amp; Directions",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
