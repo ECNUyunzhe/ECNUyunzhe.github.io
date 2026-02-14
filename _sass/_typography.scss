@@ -148,27 +148,44 @@ blockquote {
   opacity: 0.8;
 }
 /* =======================================================
-   PEOPLE PAGE STYLES (成员页面样式优化)
+   PEOPLE PAGE STYLES (增强修复版)
    ======================================================= */
 
-/* 1. 限制头像图片的宽度，不再让它占满半个屏幕 */
-.profile img {
-  max-width: 180px !important; /* 调整此数值可以控制图片大小 */
+/* 1. 核心修复：同时针对容器和图片本身进行限制 */
+.profile, 
+.profile img, 
+.profile .img-fluid {
+  max-width: 160px !important; /* 这里可以将数值调小一点观察变化，如 150px */
+  width: 160px !important;     /* 强制设置宽度 */
   height: auto !important;
-  margin-bottom: 1rem !important;
-  border-radius: 8px !important; /* 给照片加一点圆角，更现代 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
 }
 
-/* 2. 调整头像下方的文字大小（办公地址等） */
+/* 2. 处理图片在右侧或左侧时的边距 */
+.profile.float-right {
+  margin-left: 20px !important;
+  margin-bottom: 15px !important;
+}
+
+.profile.float-left {
+  margin-right: 20px !important;
+  margin-bottom: 15px !important;
+}
+
+/* 3. 头像装饰（圆角与阴影） */
+.profile img {
+  border-radius: 8px !important; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* 4. 文字大小微调（办公地点与简介） */
 .profile .more-info {
-  font-size: 0.9rem !important;
-  line-height: 1.5 !important;
-  color: var(--global-text-color-light) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  margin-top: 10px !important;
 }
 
-/* 3. 增加简介文本的对齐美感 */
 .profile .post-content {
-  text-align: justify;
-  font-size: 1rem;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  text-align: justify !important;
 }
