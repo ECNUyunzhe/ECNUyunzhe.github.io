@@ -135,15 +135,21 @@ blockquote {
   }
 }
 /* -------------------------------------------------------------------------
-   FORCE FONT OVERRIDE (由 DAWN Lab 设置)
-   使用 !important 强制应用 Noto Sans 字体
+   FORCE FONT OVERRIDE (DAWN Lab v2)
    ------------------------------------------------------------------------- */
 
-body, p, h1, h2, h3, h4, h5, h6, li, span, div, a {
-  font-family: "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+/* 1. 正文、列表、普通链接：使用 Noto Sans (保证易读性) */
+body, p, li, span, div, a {
+  font-family: "Noto Sans", "Noto Sans SC", "Microsoft YaHei", sans-serif !important;
 }
 
-/* 专门针对 About 页面的简介部分 */
-.profile .more-info, .news p, .post-content {
-  font-family: "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+/* 2. 标题 (H1-H6) 和 导航栏名字：使用 站酷小薇 (ZCOOL XiaoWei) 提升格调 */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .site-title {
+  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
+  font-weight: 400 !important; /* 书法体通常不需要太粗 */
+}
+
+/* 3. 专门修复：侧边栏的个人名字 */
+.profile .more-info {
+  font-family: "Noto Sans", "Noto Sans SC", sans-serif !important;
 }
