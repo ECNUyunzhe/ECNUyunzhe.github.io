@@ -206,3 +206,59 @@ blockquote {
   
   line-height: 1.3 !important;
 }
+
+/* =======================================================
+   BIBLIOGRAPHY ABBR RIBBON STYLES (期刊分区缎带美化)
+   ======================================================= */
+
+/* 1. 基础样式设定 */
+.bibliography .abbr abbr {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  border: 1px solid; /* 加个边框让它更精致 */
+}
+
+/* 2. Light Mode (亮色模式) */
+/* 需求：普鲁士蓝字，背景稍微有点区别 */
+:root {
+  --abbr-bg-light: #f0f4f8;        /* 极浅的蓝灰色背景 */
+  --abbr-text-light: #003153;      /* 普鲁士蓝字体 */
+  --abbr-border-light: #003153;    /* 普鲁士蓝边框 */
+}
+
+/* 应用 Light Mode 样式 */
+body:not(.dark) .bibliography .abbr abbr {
+  color: var(--abbr-text-light) !important;
+  background-color: var(--abbr-bg-light) !important;
+  border-color: var(--abbr-text-light) !important;
+}
+
+/* 3. Dark Mode (深色模式) */
+/* 需求：樱花粉字，背景与网页背景相近但略有不同 */
+:root {
+  --abbr-bg-dark: #2a2a2a;         /* 比纯黑稍微亮一点的深灰 */
+  --abbr-text-dark: #FF9EBF;       /* 樱花粉字体 */
+  --abbr-border-dark: #FF9EBF;     /* 樱花粉边框 */
+}
+
+/* 应用 Dark Mode 样式 */
+body.dark .bibliography .abbr abbr {
+  color: var(--abbr-text-dark) !important;
+  background-color: var(--abbr-bg-dark) !important;
+  border-color: var(--abbr-text-dark) !important;
+}
+
+/* 4. 鼠标悬停效果 (可选，增加一点交互感) */
+.bibliography .abbr abbr:hover {
+  opacity: 0.8;
+  cursor: default;
+  transition: opacity 0.2s ease-in-out;
+}
