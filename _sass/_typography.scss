@@ -72,14 +72,15 @@ header .post-title .nav-cn,
 }
 
 /* 3.2 标题中的英文 (如“DAWN”、“PUBLICATIONS”)：【小薇体 + 正文色】 */
-/* ✅ 核心修改：颜色变为 var(--global-text-color) 即黑/白自适应 */
 header .post-title .nav-en,
 .post-title .nav-en {
-  font-family: "ZCOOL XiaoWei", serif !important; /* 强制艺术字 */
-  font-size: 2.8rem !important;      /* 稍微调大，与中文视觉平衡 */
+  /* ✅ 关键：这里必须和第一步引入的字体名字一模一样 */
+  font-family: "ZCOOL XiaoWei", serif !important; 
+  
+  font-size: 2.8rem !important;      
   font-weight: 400 !important;
   
-  /* ⚠️ 这里改成了 Text Color (正文色)，不再是 Theme Color */
+  /* ✅ 关键：使用 var(--global-text-color) 实现黑白自适应 */
   color: var(--global-text-color) !important; 
   
   letter-spacing: 1px !important;
