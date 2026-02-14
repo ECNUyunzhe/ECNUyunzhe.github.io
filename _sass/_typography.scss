@@ -110,3 +110,40 @@ blockquote {
   border-radius: 8px;
   p { margin-bottom: 0; }
 }
+/* =======================================================
+   INTERNAL PAGE TITLES (内部页面大标题美化)
+   ======================================================= */
+
+.post-title {
+  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif !important;
+  font-size: 2.8rem !important;      /* 显著调大标题字体 */
+  color: var(--global-theme-color) !important;
+  margin-bottom: 0.5rem !important;
+  display: block;
+}
+
+/* 内部页面标题中的中文 */
+.post-title .nav-cn {
+  font-size: 2.8rem !important;      /* 汉字设为超大 */
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 15px;                /* 与英文标题拉开距离 */
+}
+
+/* 内部页面标题中的英文 */
+.post-title .nav-en {
+  font-size: 1.2rem !important;      /* 英文设为副标题大小 */
+  color: var(--global-text-color-light) !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  letter-spacing: 2px;
+  vertical-align: middle;            /* 保证中英文水平居中对齐 */
+}
+
+/* 移除标题下方的默认描述文字的间距 */
+.post-description {
+  font-size: 1rem !important;
+  margin-bottom: 2rem !important;
+  opacity: 0.8;
+}
