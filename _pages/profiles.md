@@ -7,22 +7,15 @@ nav: true
 nav_order: 7
 
 profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
   - align: right
     image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
+    content: about_liuyunzhe.md  # 关联我们刚才创建的文件
+    image_circular: false
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p><b>办公地点：</b></p>
+      <p>上海市闵行区东川路500号</p>
+      <p>华东师范大学 闵行校区</p>
+      <p>法商北楼 508室</p>
+
+  # 如果目前只有你一个人，可以删掉下面爱因斯坦的占位块
 ---
