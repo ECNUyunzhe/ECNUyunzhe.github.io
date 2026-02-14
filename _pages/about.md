@@ -1,13 +1,13 @@
 ---
 layout: about
-title: Home 主页
+title: "<span class='nav-cn'>主页</span><span class='nav-en'>Home</span>"
 permalink: /
 subtitle: >
     <p>Data Analytics for Well-being & Neighborhoods</p>
 
 selected_papers: false 
 
-social: true 
+social: false 
 
 announcements:
   enabled: false # ❌ 已关闭公告/新闻
