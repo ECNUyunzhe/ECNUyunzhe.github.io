@@ -50,3 +50,14 @@ $back-to-top-width: $back-to-top-diameter;
 
 // Max width default
 $max-content-width: 930px !default;
+
+// =============================================================================
+// Typography (Fonts)
+// =============================================================================
+
+// 设置无衬线字体 (正文和标题)
+// 这里优先使用 Noto Sans，后面跟的是中文字体备选，防止中文乱码
+$font-family-sans-serif: "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
+// (可选) 如果你想连代码块的字体也一起改了，可以加下面这行：
+// $font-family-monospace: "Noto Sans Mono", monospace;
