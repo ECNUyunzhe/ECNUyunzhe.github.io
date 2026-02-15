@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 城市韧性
-description: Urban Resilience
-img: assets/img/3.jpg
+title: 城市活力与韧性
+description: Urban Vitality & Resilience
+img: assets/img/urban_vr.jpg
 importance: 2
 category: work
 giscus_comments: true
