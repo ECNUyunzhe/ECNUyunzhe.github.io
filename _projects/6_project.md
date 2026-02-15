@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
+title: 环境暴露与公共健康
+description: Environment Exposure & Public Health
 img:
 importance: 4
 category: fun
