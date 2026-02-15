@@ -34,14 +34,14 @@ schedule:
     description: Chapter 0: Environment & Tools Setup
     materials:
       - name: 课程教程
-        url: /assets/html/第0章.html
+        url: /assets/html/第零章.html
 
   - week: 1
     topic: 第1章：RStudio与R Markdown入门
     description: Introduction to RStudio & R Markdown
     materials:
       - name: 课程教程
-        url: /assets/html/第1章.html
+        url: /assets/html/第零章.html
 
   - week: 2
     topic: 第2章：数据处理与探索性数据分析
