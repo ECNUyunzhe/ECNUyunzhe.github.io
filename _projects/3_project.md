@@ -2,8 +2,8 @@
 layout: page
 title: 社会空间分异
 description: Socio-spatial Disparities
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+img: assets/img/urban_ss.jpg
+redirect: 
 importance: 3
 category: work
 ---
