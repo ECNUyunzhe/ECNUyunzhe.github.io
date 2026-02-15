@@ -120,9 +120,9 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 .people-profile img { width: 100% !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important; }
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
-/* ==========================================================================
-   7. COURSE PAGE CARD STYLES (课程双语卡片 & 标签系统)
-   ========================================================================== */
+/* =======================================================
+   7. COURSE PAGE CARD STYLES (课程双语卡片 & 全标签化系统)
+   ======================================================= */
 
 /* 7.1 中文主标题 (应用变量) */
 .course-main-title {
@@ -139,7 +139,7 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   background-clip: text !important;
 }
 
-/* 7.2 英文副标题 (应用变量) */
+/* 7.2 英文副标题 */
 .course-sub-title {
   display: block;
   font-family: -apple-system, "Segoe UI", Roboto, sans-serif !important;
@@ -149,55 +149,57 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   color: var(--course-sub-color) !important;
 }
 
-/* 7.3 授课人姓名 (修复颜色 & 增加间距) */
-.course-instructor-name {
-  color: #003153; /* Light Mode: 普鲁士蓝 */
-  margin-right: 15px !important; /* ✅ 增加右侧间距，防止太挤 */
-}
-body.dark .course-instructor-name, 
-body.dark-mode .course-instructor-name {
-  color: #FF9EBF !important; /* ✅ Dark Mode: 强制樱花粉 */
-}
+/* -----------------------------------------------------------
+   7.3 核心升级：三色标签体系 (Solid Tags System)
+   统一风格：实心背景 + 白字 + 圆角 + 间距
+   ----------------------------------------------------------- */
 
-/* 7.4 课程编号标签 (修复间距) */
-.course-id-tag {
+/* 通用标签基础样式 */
+.course-tag-base {
   display: inline-block;
-  padding: 2px 8px;
-  background-color: rgba(0,0,0,0.05);
-  border-radius: 4px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  color: var(--global-text-color);
-  opacity: 0.8;
-  margin-right: 15px !important; /* ✅ 增加右侧间距 */
-  margin-left: 0 !important;     /* 重置左侧间距，统一使用右间距 */
-}
-body.dark .course-id-tag, body.dark-mode .course-id-tag {
-  background-color: rgba(255,255,255,0.1);
-}
-
-/* 7.5 课程层级标签 (实心醒目风格) */
-.course-level-tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem; 
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  padding: 3px 10px;        /* 稍微加宽一点 padding，更像按钮 */
+  border-radius: 6px;       /* 圆角 */
+  font-size: 0.75rem;       /* 小字号 */
+  font-weight: 700;         /* 加粗 */
+  color: #fff !important;   /* ✅ 强制白字，确保任何背景下都清晰 */
+  line-height: 1.4;
+  margin-right: 8px;        /* 标签之间的间距 */
+  margin-bottom: 4px;       /* 防止折行时挤在一起 */
   vertical-align: middle;
-  
-  /* Light Mode */
-  background-color: #003153;
-  color: #fff;
-  border: 1px solid #003153;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微阴影，增加质感 */
 }
-/* Dark Mode */
-body.dark .course-level-tag, 
-body.dark-mode .course-level-tag {
-  background-color: #FF6699; 
-  color: #fff;
-  border-color: #FF6699;
+
+/* [A] 授课人标签 (Instructor Tag) */
+.tag-instructor {
+  background-color: #003153; /* Light: 普鲁士蓝 */
 }
+/* Dark: 热粉色 */
+body.dark .tag-instructor, 
+body.dark-mode .tag-instructor {
+  background-color: #FF6699 !important; 
+}
+
+/* [B] 课程ID标签 (ID Tag) */
+.tag-id {
+  background-color: #6610f2; /* Light: 皇室紫 */
+}
+/* Dark: 浅紫色 */
+body.dark .tag-id, 
+body.dark-mode .tag-id {
+  background-color: #8d50f5 !important; 
+}
+
+/* [C] 课程类型标签 (Level Tag) */
+.tag-level {
+  background-color: #0f766e; /* Light: 深青色 (Teal) */
+}
+/* Dark: 青绿色 */
+body.dark .tag-level, 
+body.dark-mode .tag-level {
+  background-color: #14b8a6 !important; 
+  color: #000 !important; /* 浅绿背景配黑字更清晰，或者白字也可，这里选黑字更有极客感 */
+}
+/* 如果你喜欢白字，把上面 color: #000 删掉即可 */
 
 /* ==========================================================================
    8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
