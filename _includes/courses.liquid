@@ -3,30 +3,57 @@
     {% assign courses_by_year = site.teachings | sort: 'year' | reverse | group_by: 'year' %}
 
     {% for year_group in courses_by_year %}
-      <h2 class="year">{{ year_group.name }}</h2>
-      <div class="course-list">
+      <h2 class="year mt-4 mb-3">{{ year_group.name }}</h2>
+      
+      <div class="row">
         {% assign year_courses = year_group.items | sort: 'term' %}
         {% for course in year_courses %}
-          <div class="course-item">
-            <h3 class="course-title">
-              <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
-            </h3>
+          <div class="col-12 mb-3">
+            <div class="card h-100 hover-shadow">
+              <div class="card-body">
+                
+                <h3 class="card-title mb-3">
+                  <a href="{{ course.url | relative_url }}" class="text-decoration-none">
+                    {{ course.title }}
+                  </a>
+                </h3>
 
-            <div class="course-meta">
-              {% if course.term %}
-                <span class="course-term">{{ course.term }}</span>
-              {% endif %}
+                <div class="course-meta">
+                  
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="fw-bold text-dark me-2">
+                      {{ course.instructor }}
+                    </span>
 
-              {% if course.instructor %}
-                <span class="course-instructor">{{ course.instructor }}</span>
-              {% endif %}
-            </div>
+                    {% if course.course_id %}
+                      <span class="course-id-tag">{{ course.course_id }}</span>
+                    {% endif %}
+                  </div>
 
-            {% if course.description %}
-              <div class="course-description">
-                {{ course.description | markdownify }}
+                  <div class="text-muted small">
+                    {% if course.term %}
+                      <span class="me-3">
+                        <i class="fas fa-calendar-alt me-1"></i> {{ course.term }}
+                      </span>
+                    {% endif %}
+                    
+                    {% if course.location %}
+                      <span>
+                        <i class="fas fa-map-marker-alt me-1"></i> {{ course.location }}
+                      </span>
+                    {% endif %}
+                  </div>
+                  
+                </div>
+
+                {% if course.description %}
+                  <div class="course-description mt-3 text-muted">
+                    {{ course.description | markdownify }}
+                  </div>
+                {% endif %}
+
               </div>
-            {% endif %}
+            </div>
           </div>
         {% endfor %}
       </div>
