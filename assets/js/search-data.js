@@ -463,7 +463,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
           title: '城市数据分析与实践Urban Data Analytics and Practice',
-          description: "SOCI3312",
+          description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/data-science-fundamentals/";
             },},{id: "teachings-introduction-to-machine-learning",
