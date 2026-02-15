@@ -441,8 +441,8 @@ ninja.data = [{
           description: "Social Sensing &amp; Data Mining",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-环境暴露与公共健康",
-          title: '环境暴露与公共健康',
+            },},{id: "projects-环境暴露-与-公共健康",
+          title: '环境暴露 与 公共健康',
           description: "Environment Exposure &amp; Public Health",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
