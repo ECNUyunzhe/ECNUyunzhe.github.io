@@ -21,7 +21,7 @@ instructor: "Dr. Yunzhe Liu"
 course_id: "SOCI3312"
 
 year: 2026
-term: "Spring"
+term: "2026 · 春"
 location: "闵一教 · 226室"
 time: "星期一, 9:50-11:25 AM"
 
