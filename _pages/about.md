@@ -27,9 +27,9 @@ latest_posts:
   <span class="lang-label">EN</span>
 </div>
 
-<div id="dawn-intro-wrapper" class="lang-init">
+<div id="dawn-intro-wrapper" class="show-cn">
 
-  <div class="lang-cn" markdown="1">
+<div class="lang-cn" markdown="1">
 
 **DAWN** (**D**ata **A**nalytics for **W**ell-being & **N**eighborhoods，**福祉 · 邻里 · 数据分析**) 研究组，由华东师范大学社会发展学院人口研究所[**刘贇喆**](https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp)副教授于 2025 年发起成立。
 
@@ -37,9 +37,9 @@ latest_posts:
 
 本课题组立足于**计算社会科学、人口学、地理学、公共健康与城市规划**等学科交叉前沿，致力于利用**多源城市时空数据**与**地理人工智能技术**（GeoAI），深入解析城市复杂系统中的**社会空间分异**与**不平等**模式；旨在通过**数据驱动**的实证研究，为理解城市社会系统的演化规律与推动可持续发展，提供科学的、**以人为本**的**循证依据**。
 
-  </div>
+</div>
 
-  <div class="lang-en" markdown="1">
+<div class="lang-en" markdown="1">
 
 The **DAWN** (**D**ata **A**nalytics for **W**ell-being & **N**eighborhoods) Research Group was established in 2025 by Associate Professor [**Yunzhe Liu**](https://faculty.ecnu.edu.cn/_s6/lyz2/main.psp) at the Institute of Population Research, School of Social Development, **East China Normal University**.
 
@@ -47,7 +47,7 @@ The group is dedicated to exploring socio-spatial disparities through the lens o
 
 Positioned at the cutting-edge intersection of **Computational Social Science, Demography, Geography, Public Health, and Urban Planning**, the group utilizes **multi-source urban spatio-temporal data** and **Geospatial Artificial Intelligence (GeoAI)** to deeply analyze patterns of **socio-spatial segregation and inequality** within complex urban systems. Through **data-driven** empirical research, the group aims to provide a **scientific, human-centric, and evidence-based foundation** for understanding the evolution of urban social systems and promoting sustainable development.
 
-  </div>
+</div>
 
 </div>
 
@@ -56,26 +56,32 @@ document.addEventListener("DOMContentLoaded", function() {
   const checkbox = document.getElementById('lang-checkbox');
   const wrapper = document.getElementById('dawn-intro-wrapper');
   
+  // 定义切换函数
   function setLanguage(lang) {
     if (lang === 'en') {
-      wrapper.className = 'show-en';
+      wrapper.classList.remove('show-cn');
+      wrapper.classList.add('show-en');
       checkbox.checked = true;
     } else {
-      wrapper.className = 'show-cn';
+      wrapper.classList.remove('show-en');
+      wrapper.classList.add('show-cn');
       checkbox.checked = false;
     }
     localStorage.setItem('dawn-pref-lang', lang);
   }
 
+  // 初始化逻辑
   const savedLang = localStorage.getItem('dawn-pref-lang');
-  const browserLang = navigator.language || navigator.userLanguage;
-
-  if (savedLang) {
-    setLanguage(savedLang);
-  } else {
-    setLanguage(browserLang.startsWith('zh') ? 'cn' : 'en');
+  
+  // 只有当用户明确存过 'en' 时才切换，否则保持 HTML 里的默认中文（最安全）
+  if (savedLang === 'en') {
+    setLanguage('en');
+  } else if (savedLang === 'cn') {
+    setLanguage('cn');
   }
+  // 如果没有存过，什么都不做，默认就是显示中文
 
+  // 监听点击
   checkbox.addEventListener('change', function() {
     setLanguage(this.checked ? 'en' : 'cn');
   });
