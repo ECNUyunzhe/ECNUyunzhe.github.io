@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab Final V9: 最终整理版 (含章节编号修复 + 间距/颜色修正)
+ * DAWN Lab Final V10: 最终完美版 (含全标签系统 + 强力深色背景修复)
  ******************************************************************************/
 
 @use "variables" as v;
@@ -157,16 +157,16 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 /* 通用标签基础样式 */
 .course-tag-base {
   display: inline-block;
-  padding: 3px 10px;        /* 稍微加宽一点 padding，更像按钮 */
+  padding: 4px 12px;        /* 稍微加宽一点 padding，增加按钮感 */
   border-radius: 6px;       /* 圆角 */
-  font-size: 0.75rem;       /* 小字号 */
+  font-size: 0.8rem;        /* 适中字号 */
   font-weight: 700;         /* 加粗 */
   color: #fff !important;   /* ✅ 强制白字，确保任何背景下都清晰 */
   line-height: 1.4;
   margin-right: 8px;        /* 标签之间的间距 */
-  margin-bottom: 4px;       /* 防止折行时挤在一起 */
+  margin-bottom: 6px;       /* 防止折行时挤在一起 */
   vertical-align: middle;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微阴影，增加质感 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* 增加一点阴影质感 */
 }
 
 /* [A] 授课人标签 (Instructor Tag) */
@@ -197,9 +197,9 @@ body.dark-mode .tag-id {
 body.dark .tag-level, 
 body.dark-mode .tag-level {
   background-color: #14b8a6 !important; 
-  color: #000 !important; /* 浅绿背景配黑字更清晰，或者白字也可，这里选黑字更有极客感 */
+  color: #fff !important; /* 保持白字一致性 */
 }
-/* 如果你喜欢白字，把上面 color: #000 删掉即可 */
+
 
 /* ==========================================================================
    8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
@@ -237,17 +237,21 @@ body.dark-mode .bibliography .abbr .badge {
   /* Light Mode */
   background-color: #f8f9fa;
   border-color: #dee2e6;
+  position: relative;
 }
 
 /* Dark Mode 适配：深灰背景，确保白字能看清 */
+/* ✅ 强力修复：增加 .bg-light 选择器，防止 Bootstrap 样式残留导致背景无法变黑 */
 body.dark .course-info,
-body.dark-mode .course-info {
+body.dark-mode .course-info,
+body.dark .course-info.bg-light,
+body.dark-mode .course-info.bg-light {
   background-color: #1e1e1e !important; /* ✅ 关键修复：深灰色背景 */
   border-color: #333 !important;        
   color: #e0e0e0 !important;            
 }
 
-/* 修复信息框里的 strong 标签颜色 */
+/* 修复信息框里的 strong 标签颜色 (Instructor: 等标题) */
 body.dark .course-info strong,
 body.dark-mode .course-info strong {
   color: #fff !important; 
