@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 社会感知与数据挖掘
+title: 社会感知 与 数据挖掘
 description: Social Sensing & Data Mining
 img: assets/img/urban_sd.jpg
 importance: 3
