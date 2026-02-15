@@ -20,13 +20,18 @@
 
                 <div class="course-meta">
                   
-                  <div class="d-flex align-items-center mb-2">
-                    <span class="fw-bold text-dark me-2">
+                  <div class="d-flex align-items-center flex-wrap mb-2">
+                    
+                    <span class="course-instructor-name fw-bold me-3">
                       {{ course.instructor }}
                     </span>
 
                     {% if course.course_id %}
                       <span class="course-id-tag">{{ course.course_id }}</span>
+                    {% endif %}
+
+                    {% if course.course_level %}
+                      <span class="course-level-tag">{{ course.course_level }}</span>
                     {% endif %}
                   </div>
 
