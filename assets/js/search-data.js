@@ -461,8 +461,8 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-城市数据分析与实践",
-          title: '城市数据分析与实践',
+            },},{id: "teachings-soci3312-城市数据分析与实践",
+          title: 'SOCI3312 城市数据分析与实践',
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/data-science-fundamentals/";
