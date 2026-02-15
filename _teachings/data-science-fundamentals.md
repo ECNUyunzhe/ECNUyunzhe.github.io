@@ -1,7 +1,7 @@
 ---
 layout: course   # 注意：有些模板这里用 page，有些用 course，如果你的布局乱了，改回 course 试试
 title: "<span class='course-main-title'>城市数据分析与实践</span><span class='course-sub-title'>Urban Data Analytics and Practice</span>"
-description: "SOCI3312"
+description: 
 img: assets/img/course_cover.jpg # (可选) 如果你想在卡片上显示封面图，加上这一行
 importance: 1 # 数字越小，排在越前面
 category: work # 或者 school/university
@@ -9,10 +9,10 @@ category: work # 或者 school/university
 # --- 课程详细信息 ---
 instructor: "Dr. Yunzhe Liu <span class='course-id-tag'>SOCI3312</span>" 
 year: 2026
-term: Spring
+term: 
 location: "闵一教 · 226室"
 time: "星期一, 9:50-11:25 AM"
-course_id: SOCI3312
+course_id: 
 
 # --- 下面是教学大纲等内容 ---
 related_publications: false
