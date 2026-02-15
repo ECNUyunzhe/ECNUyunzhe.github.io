@@ -19,6 +19,7 @@ instructor: "Dr. Yunzhe Liu"
 # 5. 课程编号：只写编号！不要加 HTML 标签
 # 模板会自动检测这个字段，并加上灰色的 course-id-tag 样式
 course_id: "SOCI69001"
+course_level: "研究生（硕博） · 专业选修"
 
 year: 2026
 term: "2026 · 春"
