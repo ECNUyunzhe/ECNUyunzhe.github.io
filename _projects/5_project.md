@@ -2,9 +2,9 @@
 layout: page
 title: 社会感知与数据挖掘
 description: Social Sensing & Data Mining
-img: assets/img/1.jpg
+img: assets/img/urban_sd.jpg
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
