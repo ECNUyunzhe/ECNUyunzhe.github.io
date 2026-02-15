@@ -446,9 +446,9 @@ ninja.data = [{
           description: "Environment Exposure &amp; Public Health",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-可持续发展目标11",
+          title: '可持续发展目标11',
+          description: "Sustainable Development Goal 11",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-project-8",
