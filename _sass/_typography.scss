@@ -121,46 +121,44 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
 /* =======================================================
-   7. COURSE PAGE TAG SYSTEM (全胶囊化标签体系)
+   7. COURSE PAGE CARD STYLES (双语标题与全标签体系)
    ======================================================= */
 
+/* 7.1 中文主标题：渐变 + 粗体 */
+.course-main-title {
+  display: block; 
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;  /* 较大字号 */
+  line-height: 1.2 !important;
+  margin-bottom: 6px !important;
+
+  /* 自适应渐变色 */
+  background: var(--dawn-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* 7.2 英文副标题：小薇字体 + 较小字号 */
+.course-sub-title {
+  display: block;
+  font-family: "ZCOOL XiaoWei", serif !important; /* ✅ 强制小薇字体 */
+  font-weight: 400 !important;
+  font-size: 1.1rem !important; /* ✅ 显著小于中文标题 */
+  line-height: 1.4 !important;
+  color: var(--course-sub-color) !important; /* 灰度色 */
+  letter-spacing: 0.5px;
+}
+
+/* 7.3 全标签体系基础样式 (保持不变) */
 .course-tag-base {
-  display: inline-block;
-  padding: 5px 14px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #fff !important;
-  line-height: 1.4;
-  margin-right: 12px;       /* 胶囊之间的间距 */
-  margin-bottom: 10px;
-  vertical-align: middle;
+  display: inline-block; padding: 5px 14px; border-radius: 8px;
+  font-size: 0.8rem; font-weight: 700; color: #fff !important; line-height: 1.4;
+  margin-right: 12px; margin-bottom: 10px; vertical-align: middle;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
-
-/* ✅ 修复：图标与文字之间的间距调大 */
-.course-tag-base i {
-  margin-right: 10px !important;
-  font-size: 0.9em;
-}
-
-/* --- 标签颜色定义 (三色+三新) --- */
-.tag-instructor { background-color: #003153; }
-.tag-id { background-color: #6610f2; }
-.tag-level { background-color: #0f766e; }
-.tag-term { background-color: #d97706; }    /* 琥珀色 */
-.tag-location { background-color: #475569; } /* 石板灰 */
-.tag-time { background-color: #2563eb; }     /* 蓝色 */
-
-/* Dark Mode 标签适配 */
-body.dark, body.dark-mode, html[data-theme="dark"] {
-  .tag-instructor { background-color: #FF6699 !important; }
-  .tag-id { background-color: #8d50f5 !important; }
-  .tag-level { background-color: #14b8a6 !important; color: #fff !important; }
-  .tag-term { background-color: #f59e0b !important; }
-  .tag-location { background-color: #94a3b8 !important; }
-  .tag-time { background-color: #60a5fa !important; }
-}
+.course-tag-base i { margin-right: 8px !important; font-size: 0.9em; }
 
 /* ==========================================================================
    8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
