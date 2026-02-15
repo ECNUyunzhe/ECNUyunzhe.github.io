@@ -1,12 +1,12 @@
 ---
 layout: course
-title: "<span class='course-title'>城市数据分析与实践</span>"
+title: "<span class='course-title'>SOCI3312 城市数据分析与实践</span>"
 description:
 instructor: Dr. Yunzhe Liu
 year: 2026
-term: Spring
-location: 闵一教 226
-time: Mondays, 9:50-11:25 AM
+term: 春 Spring
+location: 闵一教 · 226室
+time: 星期一, 9:50-11:25 AM
 course_id: SOCI3312 
 schedule:
   - week: 1
@@ -79,19 +79,4 @@ This course provides a comprehensive introduction to data science principles and
 - Develop skills in data visualization and communication
 - Apply statistical methods to derive insights from data
 
-## Prerequisites
 
-- Basic programming knowledge (preferably in Python)
-- Introductory statistics
-- Comfort with basic algebra
-
-## Textbooks
-
-- "Python for Data Analysis" by Wes McKinney
-- "Data Science from Scratch" by Joel Grus
-
-## Grading
-
-- Assignments: 50%
-- Project: 40%
-- Participation: 10%
