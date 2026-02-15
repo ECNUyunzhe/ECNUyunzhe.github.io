@@ -197,3 +197,80 @@ body.dark-mode .bibliography .abbr .badge {
   box-shadow: none !important;
 }
 .bibliography .abbr abbr:hover, .bibliography .abbr a:hover, .bibliography .abbr .badge:hover { opacity: 0.8 !important; }
+
+/* =======================================================
+   8. COURSE SCHEDULE TABLE (课程表美化 & Dark模式修复)
+   ======================================================= */
+
+/* 1. 表格整体瘦身 (去除背景块，改为线条风) */
+.course table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent !important; /* 关键：去除背景色块 */
+  border: none !important; /* 去除外边框 */
+}
+
+/* 表头样式 */
+.course table th {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid var(--global-theme-color) !important; /* 仅保留下划线 */
+  padding: 1rem 0.5rem !important;
+  font-weight: 700;
+}
+
+/* 单元格样式 */
+.course table td {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important; /* 淡淡的分割线 */
+  padding: 1.2rem 0.5rem !important; /* 增加一点呼吸感 */
+  vertical-align: top !important;
+}
+
+/* 2. Dark Mode 表格适配 (极简粉色系) */
+body.dark .course table th,
+body.dark-mode .course table th {
+  border-bottom: 2px solid #FF9EBF !important; /* 表头粉色线 */
+  color: #FF9EBF !important;
+}
+
+body.dark .course table td,
+body.dark-mode .course table td {
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important; /* 深色分割线 */
+  color: #E0E0E0 !important; /* 正文灰白 */
+}
+
+/* 3. Materials 链接颜色修复 (核心需求) */
+
+/* Light Mode: 普鲁士蓝 + 虚线 */
+.schedule-materials a {
+  color: #003153 !important; 
+  text-decoration: none;
+  border-bottom: 1px dotted #003153; /* 精致的虚线 */
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.schedule-materials a:hover {
+  background-color: rgba(0, 49, 83, 0.1); /* 悬停微亮 */
+}
+
+/* Dark Mode: 樱花粉 + 虚线 */
+body.dark .schedule-materials a,
+body.dark-mode .schedule-materials a {
+  color: #FF9EBF !important; /* ✅ 你的樱花粉 */
+  border-bottom: 1px dotted #FF9EBF;
+}
+body.dark .schedule-materials a:hover,
+body.dark-mode .schedule-materials a:hover {
+  color: #FF6699 !important; /* 悬停变亮 */
+  background-color: rgba(255, 102, 153, 0.1);
+  border-bottom-color: #FF6699;
+}
+
+/* 4. 布局微调：Week 列居中 */
+.course table th:first-child,
+.course table td:first-child {
+  text-align: center;
+  width: 60px; /* 限制宽度，防止太宽 */
+}
