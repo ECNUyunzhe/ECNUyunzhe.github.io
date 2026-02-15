@@ -13,42 +13,18 @@
               <div class="card-body">
                 
                 <h3 class="card-title mb-3">
-                  <a href="{{ course.url | relative_url }}" class="text-decoration-none">
+                  <a href="{{ course.url | relative_url }}" class="text-decoration-none border-0 shadow-none" style="color: inherit !important;">
                     {{ course.title }}
                   </a>
                 </h3>
 
                 <div class="course-meta">
                   <div class="d-flex flex-wrap align-items-center">
-                    
-                    <span class="course-tag-base tag-instructor">
-                      <i class="fas fa-user-circle"></i>{{ course.instructor }}
-                    </span>
-
-                    {% if course.course_id %}
-                      <span class="course-tag-base tag-id">
-                        <i class="fas fa-fingerprint"></i>{{ course.course_id }}
-                      </span>
-                    {% endif %}
-
-                    {% if course.course_level %}
-                      <span class="course-tag-base tag-level">
-                        <i class="fas fa-layer-group"></i>{{ course.course_level }}
-                      </span>
-                    {% endif %}
-
-                    {% if course.term %}
-                      <span class="course-tag-base tag-term">
-                        <i class="fas fa-calendar-alt"></i>{{ course.term }}
-                      </span>
-                    {% endif %}
-
-                    {% if course.location %}
-                      <span class="course-tag-base tag-location">
-                        <i class="fas fa-map-marker-alt"></i>{{ course.location }}
-                      </span>
-                    {% endif %}
-
+                    <span class="course-tag-base tag-instructor"><i class="fas fa-user-circle"></i>{{ course.instructor }}</span>
+                    {% if course.course_id %}<span class="course-tag-base tag-id"><i class="fas fa-fingerprint"></i>{{ course.course_id }}</span>{% endif %}
+                    {% if course.course_level %}<span class="course-tag-base tag-level"><i class="fas fa-layer-group"></i>{{ course.course_level }}</span>{% endif %}
+                    {% if course.term %}<span class="course-tag-base tag-term"><i class="fas fa-calendar-alt"></i>{{ course.term }}</span>{% endif %}
+                    {% if course.location %}<span class="course-tag-base tag-location"><i class="fas fa-map-marker-alt"></i>{{ course.location }}</span>{% endif %}
                   </div>
                 </div>
 
