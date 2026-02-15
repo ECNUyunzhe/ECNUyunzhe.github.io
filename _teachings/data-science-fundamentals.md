@@ -1,5 +1,5 @@
 ---
-layout: page   # 注意：有些模板这里用 page，有些用 course，如果你的布局乱了，改回 course 试试
+layout: course   # 注意：有些模板这里用 page，有些用 course，如果你的布局乱了，改回 course 试试
 title: "<span class='course-main-title'>城市数据分析与实践</span><span class='course-sub-title'>Urban Data Analytics and Practice</span>"
 description: "SOCI3312"
 img: assets/img/course_cover.jpg # (可选) 如果你想在卡片上显示封面图，加上这一行
