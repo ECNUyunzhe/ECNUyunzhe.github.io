@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 环境暴露与公共健康
+title: 环境暴露 与 公共健康
 description: Environment Exposure & Public Health
-img:
+img: 
 importance: 4
 category: fun
 ---
