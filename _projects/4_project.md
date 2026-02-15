@@ -2,9 +2,9 @@
 layout: page
 title: 人口迁移 & 城市流动性
 description: Population Migration & Urban Mobility
-img:
+img: assets/img/urban_mm.jpg
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
