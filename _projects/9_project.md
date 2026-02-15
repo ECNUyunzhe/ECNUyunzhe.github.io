@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 开源地理数据科学
-description: Open Geographic Data Science
-img: assets/img/6.jpg
+title: 开放科学 与 开源数据
+description: Open Science & Open Data
+img: assets/img/urban_open.jpg
 importance: 4
 category: work
 ---
