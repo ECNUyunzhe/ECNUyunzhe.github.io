@@ -2,7 +2,7 @@
 layout: page
 ---
 <div class="course">
-  <div class="course-info p-3 mb-4 bg-light rounded-3 border">
+  <div class="course-info p-3 mb-4 rounded-3 border">
     <div class="row">
       {% if page.instructor %}
       <div class="col-md-6 mb-2"><strong>Instructor:</strong> {{ page.instructor }}</div>
@@ -25,7 +25,8 @@ layout: page
   {{ content }}
 
   {% if page.schedule %}
-    <h2 class="mt-5 mb-4">Schedule</h2> <div class="table-responsive">
+    <h2 class="mt-5 mb-4">Schedule</h2>
+    <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
@@ -52,7 +53,8 @@ layout: page
                 {% if entry.materials %}
                   <ul class="schedule-materials list-unstyled mb-0">
                     {% for material in entry.materials %}
-                      <li class="mb-2"> {% if material.url %}
+                      <li class="mb-2">
+                        {% if material.url %}
                           <a href="{{ material.url | relative_url }}" target="_blank">
                             <i class="fas fa-link me-1" style="font-size: 0.8em; opacity: 0.7;"></i>{{ material.name }}
                           </a>
