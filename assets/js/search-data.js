@@ -451,9 +451,9 @@ ninja.data = [{
           description: "Sustainable Development Goal 11",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+            },},{id: "projects-地理人工智能方法与应用",
+          title: '地理人工智能方法与应用',
+          description: "GeoAI Methods &amp; Applications",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
             },},{id: "projects-project-9",
