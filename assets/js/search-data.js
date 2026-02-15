@@ -456,9 +456,9 @@ ninja.data = [{
           description: "GeoAI Methods &amp; Applications",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+            },},{id: "projects-开源地理数据科学",
+          title: '开源地理数据科学',
+          description: "Open Geographic Data Science",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
