@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab Final V13: 终极集成版 (全标签体系 + 双语标题 + 深色模式强力修复)
+ * DAWN Lab Final V14: 终极集成版 (全标签 + 双语标题 + 语言切换开关)
  ******************************************************************************/
 
 @use "variables" as v;
@@ -199,4 +199,53 @@ body.dark, body.dark-mode, html[data-theme="dark"] {
   .course table th { border-bottom-color: #FF9EBF !important; color: #FF9EBF !important; }
   .course table td { border-bottom-color: rgba(255,255,255,0.1) !important; color: #E0E0E0 !important; }
   .course table .fw-bold { color: #fff !important; }
+}
+
+/* =======================================================
+   10. HOMEPAGE LANGUAGE SWITCHER (主页语言切换开关)
+   ======================================================= */
+
+/* --- 容器布局 --- */
+.lang-switch-container {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 12px; margin-bottom: 2.5rem;
+}
+.lang-label { font-size: 0.8rem; font-weight: 700; opacity: 0.5; transition: 0.3s; }
+
+/* --- 开关按钮本体 --- */
+.switch { position: relative; display: inline-block; width: 44px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #e0e0e0; transition: .4s; border-radius: 34px;
+}
+.slider:before {
+  position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px;
+  background-color: white; transition: .4s; border-radius: 50%;
+}
+
+/* 选中状态（Light Mode） */
+input:checked + .slider { background-color: #003153; }
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* --- 🌙 Dark Mode 特效：呼吸粉霓虹 --- */
+body.dark .slider, body.dark-mode .slider { background-color: #333; }
+body.dark input:checked + .slider, body.dark-mode input:checked + .slider {
+  background-color: #FF3377;
+  box-shadow: 0 0 10px rgba(255, 51, 119, 0.5); /* 呼吸霓虹效果 */
+}
+
+/* --- 内容显示/隐藏动画逻辑 --- */
+#dawn-intro-wrapper .lang-cn, #dawn-intro-wrapper .lang-en { display: none; opacity: 0; }
+
+.show-cn .lang-cn {
+  display: block; animation: dawnFadeIn 0.6s forwards;
+}
+.show-en .lang-en {
+  display: block; animation: dawnFadeIn 0.6s forwards;
+}
+
+@keyframes dawnFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
