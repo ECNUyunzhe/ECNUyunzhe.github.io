@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 城市活力与韧性
+title: 城市活力 与 韧性
 description: Urban Vitality & Resilience
 img: assets/img/urban_vr.jpg
 importance: 2
