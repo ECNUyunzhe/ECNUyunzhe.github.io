@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 地理人工智能方法与应用
+title: GeoAI方法 与 应用
 description: GeoAI Methods & Applications
-img: assets/img/9.jpg
+img: assets/img/urban_ai.jpg
 importance: 2
 category: work
 giscus_comments: true
