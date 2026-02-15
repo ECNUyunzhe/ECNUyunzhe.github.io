@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
+title: 开源地理数据科学
+description: Open Geographic Data Science
 img: assets/img/6.jpg
 importance: 4
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
