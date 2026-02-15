@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: 人口迁移 & 城市流动性
+description: Population Migration & Urban Mobility
 img:
 importance: 3
 category: fun
