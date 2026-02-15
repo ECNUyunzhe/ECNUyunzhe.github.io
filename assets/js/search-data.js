@@ -446,11 +446,6 @@ ninja.data = [{
           description: "Environment Exposure &amp; Public Health",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-可持续发展目标11",
-          title: '可持续发展目标11',
-          description: "Sustainable Development Goal 11",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
             },},{id: "projects-地理人工智能方法与应用",
           title: '地理人工智能方法与应用',
           description: "GeoAI Methods &amp; Applications",
