@@ -2,9 +2,9 @@
 layout: page
 title: 环境暴露 与 公共健康
 description: Environment Exposure & Public Health
-img: 
+img: assets/img/urban_ee.jpg
 importance: 4
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
