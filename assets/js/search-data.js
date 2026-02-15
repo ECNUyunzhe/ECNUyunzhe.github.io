@@ -421,9 +421,9 @@ ninja.data = [{
           description: "Urban Perception",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-城市韧性",
-          title: '城市韧性',
-          description: "Urban Resilience",
+            },},{id: "projects-城市活力与韧性",
+          title: '城市活力与韧性',
+          description: "Urban Vitality &amp; Resilience",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-社会空间分异",
