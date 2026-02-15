@@ -446,8 +446,8 @@ ninja.data = [{
           description: "Environment Exposure &amp; Public Health",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-地理人工智能方法与应用",
-          title: '地理人工智能方法与应用',
+            },},{id: "projects-geoai方法-与-应用",
+          title: 'GeoAI方法 与 应用',
           description: "GeoAI Methods &amp; Applications",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
