@@ -124,7 +124,7 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
 /* =======================================================
-   7. COURSE PAGE CARD STYLES (课程双语卡片)
+   7. COURSE PAGE CARD STYLES (课程双语卡片 & 标签系统)
    ======================================================= */
 
 /* 7.1 中文主标题 (应用变量) */
@@ -155,7 +155,7 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   color: var(--course-sub-color) !important;
 }
 
-/* 7.3 课程编号标签 */
+/* 7.3 课程编号标签 (灰色半透明风格) */
 .course-id-tag {
   display: inline-block;
   margin-left: 10px;
@@ -169,6 +169,41 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 }
 body.dark .course-id-tag, body.dark-mode .course-id-tag {
   background-color: rgba(255,255,255,0.1);
+}
+
+/* 7.4 授课人姓名 (修复看不清的问题) */
+.course-instructor-name {
+  color: #003153; /* Light Mode: 普鲁士蓝 */
+}
+body.dark .course-instructor-name, 
+body.dark-mode .course-instructor-name {
+  color: #FF9EBF !important; /* Dark Mode: 樱花粉 */
+}
+
+/* 7.5 课程层级标签 (醒目实心风格) */
+/* ✅ 新增：用于区分本科/研究生课程 */
+.course-level-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem; /* 稍微小一点，显得精致 */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: 5px;   /* 与前一个标签的间距 */
+  vertical-align: middle;
+  
+  /* Light Mode: 深蓝底白字 (醒目) */
+  background-color: #003153;
+  color: #fff;
+  border: 1px solid #003153;
+}
+
+/* Dark Mode: 热粉底白字 (醒目) */
+body.dark .course-level-tag, 
+body.dark-mode .course-level-tag {
+  background-color: #FF6699; /* 热粉色 */
+  color: #fff;
+  border-color: #FF6699;
 }
 
 /* =======================================================
