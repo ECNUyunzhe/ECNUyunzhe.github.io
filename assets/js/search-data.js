@@ -421,8 +421,8 @@ ninja.data = [{
           description: "Urban Perception",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-城市活力与韧性",
-          title: '城市活力与韧性',
+            },},{id: "projects-城市活力-与-韧性",
+          title: '城市活力 与 韧性',
           description: "Urban Vitality &amp; Resilience",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
