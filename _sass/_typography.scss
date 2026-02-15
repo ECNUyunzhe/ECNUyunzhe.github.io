@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab Final V8: 变量重构版 (彻底修复 Dark Mode 渐变)
+ * DAWN Lab Final V9: 最终整理版 (含章节编号修复 + 间距/颜色修正)
  ******************************************************************************/
 
 @use "variables" as v;
 
 /* ==========================================================================
-   0. 核心定义：CSS 变量系统 (最稳健的方案)
+   0. 核心定义：CSS 变量系统
    ========================================================================== */
 :root {
   /* ☀️ Light Mode 默认渐变 */
@@ -18,7 +18,6 @@
 }
 
 /* 🌙 Dark Mode 变量重写 */
-/* 只要 body 有 dark 类，这些变量就会自动变身，无需额外选择器 */
 body.dark, body.dark-mode, html[data-theme="dark"] {
   /* 渐变：热粉(#FF3377) -> 极亮白粉(#FFFFFF)，增强了亮部，更通透 */
   --dawn-gradient: linear-gradient(45deg, #FF3377 0%, #FFFFFF 100%);
@@ -49,7 +48,6 @@ h1, h2, h3, h4, h6, .navbar-brand, .site-title {
 }
 
 /* 普通标题 (不带渐变，保持默认主题色) */
-/* 这里的颜色由模板自带变量控制，所以"Introduction..."会自动变粉 */
 h5, .card-title {
   font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif !important; 
   font-weight: 700 !important;       
@@ -82,7 +80,6 @@ header .post-title .nav-cn,
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   
-  /* 兼容回退 */
   color: var(--global-theme-color); 
 }
 
@@ -114,18 +111,18 @@ header .post-title .nav-en,
 .social .contact-icons a:hover { transform: scale(1.15); color: var(--global-theme-color) !important; }
 blockquote { background: var(--global-bg-color); border-left: 5px solid var(--global-theme-color); margin: 1.5em 0; padding: 1em; font-size: 1.1rem; border-radius: 8px; p { margin-bottom: 0; } }
 
-/* =======================================================
+/* ==========================================================================
    6. PEOPLE PAGE STYLES (成员页面)
-   ======================================================= */
+   ========================================================================== */
 .people-profile { width: 30% !important; max-width: 200px !important; min-width: 150px !important; margin-bottom: 20px !important; }
 .people-profile.float-right { margin-left: 20px !important; }
 .people-profile.float-left { margin-right: 20px !important; }
 .people-profile img { width: 100% !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important; }
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
-/* =======================================================
+/* ==========================================================================
    7. COURSE PAGE CARD STYLES (课程双语卡片 & 标签系统)
-   ======================================================= */
+   ========================================================================== */
 
 /* 7.1 中文主标题 (应用变量) */
 .course-main-title {
@@ -136,7 +133,6 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   line-height: 1.3 !important;
   margin-bottom: 4px !important;
 
-  /* ✅ 核心：调用变量，不再手动写颜色 */
   background: var(--dawn-gradient) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -150,15 +146,22 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   font-weight: 500 !important;
   font-size: 1.1rem !important;
   line-height: 1.4 !important;
-  
-  /* ✅ 调用变量，实现深浅模式自动切换灰度 */
   color: var(--course-sub-color) !important;
 }
 
-/* 7.3 课程编号标签 (灰色半透明风格) */
+/* 7.3 授课人姓名 (修复颜色 & 增加间距) */
+.course-instructor-name {
+  color: #003153; /* Light Mode: 普鲁士蓝 */
+  margin-right: 15px !important; /* ✅ 增加右侧间距，防止太挤 */
+}
+body.dark .course-instructor-name, 
+body.dark-mode .course-instructor-name {
+  color: #FF9EBF !important; /* ✅ Dark Mode: 强制樱花粉 */
+}
+
+/* 7.4 课程编号标签 (修复间距) */
 .course-id-tag {
   display: inline-block;
-  margin-left: 10px;
   padding: 2px 8px;
   background-color: rgba(0,0,0,0.05);
   border-radius: 4px;
@@ -166,49 +169,39 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
   font-size: 0.85rem;
   color: var(--global-text-color);
   opacity: 0.8;
+  margin-right: 15px !important; /* ✅ 增加右侧间距 */
+  margin-left: 0 !important;     /* 重置左侧间距，统一使用右间距 */
 }
 body.dark .course-id-tag, body.dark-mode .course-id-tag {
   background-color: rgba(255,255,255,0.1);
 }
 
-/* 7.4 授课人姓名 (修复看不清的问题) */
-.course-instructor-name {
-  color: #003153; /* Light Mode: 普鲁士蓝 */
-}
-body.dark .course-instructor-name, 
-body.dark-mode .course-instructor-name {
-  color: #FF9EBF !important; /* Dark Mode: 樱花粉 */
-}
-
-/* 7.5 课程层级标签 (醒目实心风格) */
-/* ✅ 新增：用于区分本科/研究生课程 */
+/* 7.5 课程层级标签 (实心醒目风格) */
 .course-level-tag {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 4px;
-  font-size: 0.75rem; /* 稍微小一点，显得精致 */
+  font-size: 0.75rem; 
   font-weight: 700;
   letter-spacing: 0.5px;
-  margin-left: 5px;   /* 与前一个标签的间距 */
   vertical-align: middle;
   
-  /* Light Mode: 深蓝底白字 (醒目) */
+  /* Light Mode */
   background-color: #003153;
   color: #fff;
   border: 1px solid #003153;
 }
-
-/* Dark Mode: 热粉底白字 (醒目) */
+/* Dark Mode */
 body.dark .course-level-tag, 
 body.dark-mode .course-level-tag {
-  background-color: #FF6699; /* 热粉色 */
+  background-color: #FF6699; 
   color: #fff;
   border-color: #FF6699;
 }
 
-/* =======================================================
-   BIBLIOGRAPHY ABBR RIBBON STYLES (纯色增强)
-   ======================================================= */
+/* ==========================================================================
+   8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
+   ========================================================================== */
 /* Light Mode */
 body:not(.dark):not(.dark-mode) .bibliography .abbr abbr,
 body:not(.dark):not(.dark-mode) .bibliography .abbr a,
@@ -233,13 +226,13 @@ body.dark-mode .bibliography .abbr .badge {
 }
 .bibliography .abbr abbr:hover, .bibliography .abbr a:hover, .bibliography .abbr .badge:hover { opacity: 0.8 !important; }
 
-/* =======================================================
-   8. COURSE PAGE FIXES (课程页深色模式最终修复版)
-   ======================================================= */
+/* ==========================================================================
+   9. COURSE DETAIL FIXES (课程详情页最终修复)
+   ========================================================================== */
 
 /* --- A. 顶部信息框 (Course Info Box) --- */
 .course-info {
-  /* Light Mode 默认背景：极浅灰色 */
+  /* Light Mode */
   background-color: #f8f9fa;
   border-color: #dee2e6;
 }
@@ -247,20 +240,18 @@ body.dark-mode .bibliography .abbr .badge {
 /* Dark Mode 适配：深灰背景，确保白字能看清 */
 body.dark .course-info,
 body.dark-mode .course-info {
-  background-color: #1e1e1e !important; /* 深灰色背景，不再是死白 */
-  border-color: #333 !important;        /* 深色边框 */
-  color: #e0e0e0 !important;            /* 浅灰文字 */
+  background-color: #1e1e1e !important; /* ✅ 关键修复：深灰色背景 */
+  border-color: #333 !important;        
+  color: #e0e0e0 !important;            
 }
 
-/* 修复信息框里的 strong 标签颜色 (Instructor: 等标题) */
+/* 修复信息框里的 strong 标签颜色 */
 body.dark .course-info strong,
 body.dark-mode .course-info strong {
   color: #fff !important; 
 }
 
-
 /* --- B. 课程表 (Schedule Table) --- */
-
 /* 1. 表格整体去背景，变透明 */
 .course table {
   width: 100%;
@@ -271,19 +262,17 @@ body.dark-mode .course-info strong {
 
 /* 2. 表头样式修复 */
 .course table th {
-  /* 关键：表头背景透明 */
   background-color: transparent !important;
   border: none !important;
   border-bottom: 2px solid var(--global-theme-color) !important;
   padding: 1rem 0.5rem !important;
   font-weight: 700;
 }
-
 /* Dark Mode 表头适配 */
 body.dark .course table th,
 body.dark-mode .course table th {
-  border-bottom: 2px solid #FF9EBF !important; /* 粉色下划线 */
-  color: #FF9EBF !important; /* 粉色文字 */
+  border-bottom: 2px solid #FF9EBF !important; 
+  color: #FF9EBF !important; 
 }
 
 /* 3. 单元格样式修复 */
@@ -294,7 +283,6 @@ body.dark-mode .course table th {
   padding: 1.2rem 0.5rem !important;
   vertical-align: top !important;
 }
-
 /* Dark Mode 单元格适配 */
 body.dark .course table td,
 body.dark-mode .course table td {
@@ -302,10 +290,8 @@ body.dark-mode .course table td {
   color: #E0E0E0 !important;
 }
 
-
-/* --- C. Materials 链接颜色 (樱花粉) --- */
-
-/* Light Mode: 普鲁士蓝 */
+/* --- C. Materials 链接颜色 (修复看不清的问题) --- */
+/* Light Mode */
 .schedule-materials a {
   color: #003153 !important; 
   text-decoration: none;
@@ -313,29 +299,26 @@ body.dark-mode .course table td {
   transition: all 0.2s;
 }
 
-/* Dark Mode: 樱花粉 */
+/* Dark Mode: 强制樱花粉 */
 body.dark .schedule-materials a,
 body.dark-mode .schedule-materials a {
-  color: #FF9EBF !important; /* 核心：樱花粉链接 */
+  color: #FF9EBF !important; /* ✅ 关键修复：樱花粉 */
   border-bottom-color: #FF9EBF !important;
 }
 body.dark .schedule-materials a:hover,
 body.dark-mode .schedule-materials a:hover {
-  color: #FF6699 !important; /* 悬停变亮 */
+  color: #FF6699 !important; 
   border-bottom-color: #FF6699 !important;
   background-color: rgba(255, 102, 153, 0.1);
 }
 
-
 /* --- D. 细节微调 --- */
-
 /* 1. Week 列居中 */
 .course table th:first-child,
 .course table td:first-child {
   text-align: center;
   width: 60px;
 }
-
 /* 2. Topic 标题在深色模式下变白 */
 body.dark .course table .fw-bold,
 body.dark-mode .course table .fw-bold {
