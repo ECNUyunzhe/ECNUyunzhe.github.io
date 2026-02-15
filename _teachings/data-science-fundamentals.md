@@ -28,26 +28,27 @@ time: "星期一, 9:50-11:25 AM"
 # --- 教学大纲 ---
 related_publications: false
 schedule:
-  - week: 1
+  - week: 0
     # date: Feb 5  <-- 这一行可以删掉了，因为我们在 layout 里已经把日期列去掉了
-    topic: Introduction to Data Science
-    description: Overview of the data science workflow and key concepts.
+    topic: 第0章：环境搭建与准备
+    description: Chapter 0: Environment & Tools Setup
     materials:
-      - name: Syllabus
-        url: /assets/pdf/example_pdf.pdf
-      - name: Slides
-        url: /assets/pdf/example_pdf.pdf
+      - name: 课程教程
+        url: /assets/html/第0章.html
+
+  - week: 1
+    topic: 第1章：RStudio与R Markdown入门
+    description: Introduction to RStudio & R Markdown
+    materials:
+      - name: 课程教程
+        url: /assets/html/第1章.html
 
   - week: 2
-    topic: Data Collection and APIs
-    description: Methods for collecting data through APIs, web scraping, and databases.
+    topic: 第2章：数据处理与探索性数据分析
+    description: Basic Data Processing & EDA
     materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Assignment 1
-        url: /assets/pdf/example_pdf.pdf
+      - name: 课程教程
+        url: /assets/html/第2章.html
 ---
 
-## Course Overview
 
-This course provides a comprehensive introduction...
