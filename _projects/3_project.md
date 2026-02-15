@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: 社会空间分异
+description: Socio-spatial Disparities
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 importance: 3
