@@ -1,18 +1,37 @@
 ---
 layout: course
-title: Introduction to Machine Learning
-description: This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.
-instructor: Prof. Example
-year: 2023
-term: Fall
-location: Main Campus, Room 301
-time: Tuesdays and Thursdays, 10:00-11:30 AM
-course_id: intro-machine-learning
+# 1. 标题：保持 HTML 写法，为了实现双语渐变效果
+title: "<span class='course-main-title'>多源城市数据分析与实践</span><span class='course-sub-title'>Multi-source Urban Data Analytics and Practice</span>"
+
+# 2. 描述：不要放 ID 了，这里留空或者写一句话简介（例如“本课程介绍...”）
+description: "" 
+
+# 3. 封面图 (可选)
+img: assets/img/course_cover.jpg 
+importance: 1 
+category: work 
+
+# --- 课程详细信息 (关键修改区) ---
+
+# 4. 授课人：只写名字！不要加 HTML 标签
+instructor: "Dr. Yunzhe Liu" 
+
+# 5. 课程编号：只写编号！不要加 HTML 标签
+# 模板会自动检测这个字段，并加上灰色的 course-id-tag 样式
+course_id: "SOCI69001"
+
+year: 2026
+term: "2026 · 春"
+location: "闵法商南楼 · 402室"
+time: "星期一, 14:50-16:25 PM"
+
+# --- 教学大纲 ---
+related_publications: false
 schedule:
   - week: 1
-    date: Sept 5
-    topic: Course Introduction
-    description: Overview of machine learning, course structure, and expectations.
+    # date: Feb 5  <-- 这一行可以删掉了，因为我们在 layout 里已经把日期列去掉了
+    topic: Introduction to Data Science
+    description: Overview of the data science workflow and key concepts.
     materials:
       - name: Syllabus
         url: /assets/pdf/example_pdf.pdf
@@ -20,94 +39,15 @@ schedule:
         url: /assets/pdf/example_pdf.pdf
 
   - week: 2
-    date: Sept 12
-    topic: Linear Regression
-    description: Introduction to linear regression, gradient descent, and model evaluation.
+    topic: Data Collection and APIs
+    description: Methods for collecting data through APIs, web scraping, and databases.
     materials:
       - name: Lecture Notes
         url: /assets/pdf/example_pdf.pdf
       - name: Assignment 1
         url: /assets/pdf/example_pdf.pdf
-
-  - week: 3
-    date: Sept 19
-    topic: Classification
-    description: Logistic regression, decision boundaries, and multi-class classification.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Coding Lab
-        url: https://github.com/
-
-  - week: 4
-    date: Sept 26
-    topic: Decision Trees and Random Forests
-    description: Tree-based methods, ensemble learning, and feature importance.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Assignment 2
-        url: /assets/pdf/example_pdf.pdf
-
-  - week: 5
-    date: Oct 3
-    topic: Support Vector Machines
-    description: Margin maximization, kernel methods, and support vectors.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Review Materials
-        url: /assets/pdf/example_pdf.pdf
-
-  - week: 6
-    date: Oct 10
-    topic: Midterm Exam
-    description: Covers weeks 1-5.
-
-  - week: 7
-    date: Oct 17
-    topic: Neural Networks Fundamentals
-    description: Perceptrons, multilayer networks, and backpropagation.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Assignment 3
-        url: /assets/pdf/example_pdf.pdf
-
-  - week: 8
-    date: Oct 24
-    topic: Deep Learning
-    description: Convolutional neural networks, recurrent neural networks, and applications.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Coding Lab
-        url: https://github.com/
 ---
 
 ## Course Overview
 
-This introductory course on machine learning covers fundamental concepts and algorithms in the field. By the end of this course, students will be able to:
-
-- Understand key machine learning paradigms and concepts
-- Implement basic machine learning algorithms
-- Evaluate and compare model performance
-- Apply machine learning techniques to real-world problems
-
-## Prerequisites
-
-- Basic knowledge of linear algebra and calculus
-- Programming experience in Python
-- Probability and statistics fundamentals
-
-## Textbooks
-
-- Primary: "Machine Learning: A Probabilistic Perspective" by Kevin Murphy
-- Reference: "Pattern Recognition and Machine Learning" by Christopher Bishop
-
-## Grading
-
-- Assignments: 40%
-- Midterm Exam: 20%
-- Final Project: 30%
-- Participation: 10%
+This course provides a comprehensive introduction...
