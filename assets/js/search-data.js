@@ -461,8 +461,8 @@ ninja.data = [{
           description: "Open Geographic Data Science",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
-          title: '城市数据分析与实践Urban Data Analytics and Practice',
+            },},{id: "teachings-",
+          title: '',
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/data-science-fundamentals/";
