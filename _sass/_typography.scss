@@ -121,85 +121,46 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
 /* =======================================================
-   7. COURSE PAGE CARD STYLES (课程双语卡片 & 全标签化系统)
+   7. COURSE PAGE TAG SYSTEM (全胶囊化标签体系)
    ======================================================= */
 
-/* 7.1 中文主标题 (应用变量) */
-.course-main-title {
-  display: block; 
-  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1.8rem !important;  
-  line-height: 1.3 !important;
-  margin-bottom: 4px !important;
-
-  background: var(--dawn-gradient) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-}
-
-/* 7.2 英文副标题 */
-.course-sub-title {
-  display: block;
-  font-family: -apple-system, "Segoe UI", Roboto, sans-serif !important;
-  font-weight: 500 !important;
-  font-size: 1.1rem !important;
-  line-height: 1.4 !important;
-  color: var(--course-sub-color) !important;
-}
-
-/* -----------------------------------------------------------
-   7.3 核心升级：三色标签体系 (Solid Tags System)
-   统一风格：实心背景 + 白字 + 圆角 + 间距
-   ----------------------------------------------------------- */
-
-/* 通用标签基础样式 */
 .course-tag-base {
   display: inline-block;
-  padding: 4px 12px;        /* 稍微加宽一点 padding，增加按钮感 */
-  border-radius: 6px;       /* 圆角 */
-  font-size: 0.8rem;        /* 适中字号 */
-  font-weight: 700;         /* 加粗 */
-  color: #fff !important;   /* ✅ 强制白字，确保任何背景下都清晰 */
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff !important;
   line-height: 1.4;
-  margin-right: 8px;        /* 标签之间的间距 */
-  margin-bottom: 6px;       /* 防止折行时挤在一起 */
+  margin-right: 12px;       /* 胶囊之间的间距 */
+  margin-bottom: 10px;
   vertical-align: middle;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* 增加一点阴影质感 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-/* [A] 授课人标签 (Instructor Tag) */
-.tag-instructor {
-  background-color: #003153; /* Light: 普鲁士蓝 */
-}
-/* Dark: 热粉色 */
-body.dark .tag-instructor, 
-body.dark-mode .tag-instructor {
-  background-color: #FF6699 !important; 
+/* ✅ 修复：图标与文字之间的间距调大 */
+.course-tag-base i {
+  margin-right: 10px !important;
+  font-size: 0.9em;
 }
 
-/* [B] 课程ID标签 (ID Tag) */
-.tag-id {
-  background-color: #6610f2; /* Light: 皇室紫 */
-}
-/* Dark: 浅紫色 */
-body.dark .tag-id, 
-body.dark-mode .tag-id {
-  background-color: #8d50f5 !important; 
-}
+/* --- 标签颜色定义 (三色+三新) --- */
+.tag-instructor { background-color: #003153; }
+.tag-id { background-color: #6610f2; }
+.tag-level { background-color: #0f766e; }
+.tag-term { background-color: #d97706; }    /* 琥珀色 */
+.tag-location { background-color: #475569; } /* 石板灰 */
+.tag-time { background-color: #2563eb; }     /* 蓝色 */
 
-/* [C] 课程类型标签 (Level Tag) */
-.tag-level {
-  background-color: #0f766e; /* Light: 深青色 (Teal) */
+/* Dark Mode 标签适配 */
+body.dark, body.dark-mode, html[data-theme="dark"] {
+  .tag-instructor { background-color: #FF6699 !important; }
+  .tag-id { background-color: #8d50f5 !important; }
+  .tag-level { background-color: #14b8a6 !important; color: #fff !important; }
+  .tag-term { background-color: #f59e0b !important; }
+  .tag-location { background-color: #94a3b8 !important; }
+  .tag-time { background-color: #60a5fa !important; }
 }
-/* Dark: 青绿色 */
-body.dark .tag-level, 
-body.dark-mode .tag-level {
-  background-color: #14b8a6 !important; 
-  color: #fff !important; /* 保持白字一致性 */
-}
-
 
 /* ==========================================================================
    8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
@@ -228,108 +189,68 @@ body.dark-mode .bibliography .abbr .badge {
 }
 .bibliography .abbr abbr:hover, .bibliography .abbr a:hover, .bibliography .abbr .badge:hover { opacity: 0.8 !important; }
 
-/* ==========================================================================
-   9. COURSE DETAIL FIXES (课程详情页最终强力修复)
-   ========================================================================== */
+/* =======================================================
+   9. COURSE DETAIL FIXES (布局与表格修复)
+   ======================================================= */
 
-/* --- A. 顶部信息框 (Course Info Box) --- */
-.course-info {
-  background-color: #f8f9fa; /* Light Mode Default */
-  border: 1px solid #dee2e6;
-  position: relative;
+/* --- A. 彻底去掉边框和背景框 --- */
+.course-info,
+.course-info-tags {
+  background-color: transparent !important; /* 跟随网页背景 */
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: 1.5rem;
 }
 
-/* Dark Mode 适配：深灰背景，确保白字能看清 */
-/* ✅ 强力修复：增加 .bg-light 选择器，防止 Bootstrap 样式残留导致背景无法变黑 */
-body.dark .course-info,
-body.dark-mode .course-info,
-body.dark .course-info.bg-light,
-body.dark-mode .course-info.bg-light,
-html[data-theme="dark"] .course-info {
-  background-color: #1e1e1e !important; /* ✅ 关键修复：深灰色背景 */
-  border-color: #333 !important;        
-  color: #e0e0e0 !important;            
-}
-
-/* 修复信息框里的 strong 标签颜色 (Instructor: 等标题) */
-body.dark .course-info strong,
-body.dark-mode .course-info strong,
-html[data-theme="dark"] .course-info strong {
-  color: #fff !important; 
-}
-
-/* --- B. 课程表链接 (Materials Links) --- */
-/* Light Mode */
+/* --- B. 课程表链接 (樱花粉修复) --- */
 .schedule-materials a {
-  color: #003153 !important; 
+  color: #003153 !important;
   text-decoration: none;
   border-bottom: 1px dotted #003153;
   transition: all 0.2s;
 }
 
-/* Dark Mode: 强制樱花粉 (Sakura Pink) */
-body.dark .schedule-materials a,
-body.dark-mode .schedule-materials a,
-html[data-theme="dark"] .schedule-materials a {
-  color: #FF9EBF !important; /* ✅ 关键修复：樱花粉 */
-  border-bottom-color: #FF9EBF !important;
-}
-body.dark .schedule-materials a:hover,
-body.dark-mode .schedule-materials a:hover,
-html[data-theme="dark"] .schedule-materials a:hover {
-  color: #FF6699 !important; 
-  border-bottom-color: #FF6699 !important;
-  background-color: rgba(255, 102, 153, 0.1);
+/* Dark Mode 强制樱花粉 */
+body.dark, body.dark-mode, html[data-theme="dark"] {
+  .schedule-materials a {
+    color: #FF9EBF !important; /* ✅ 关键修复：樱花粉 */
+    border-bottom-color: #FF9EBF !important;
+  }
+  .schedule-materials a:hover {
+    color: #FF6699 !important;
+    background-color: rgba(255, 102, 153, 0.1);
+  }
 }
 
-/* --- C. 表格样式 (透明化) --- */
-/* 1. 表格整体去背景，变透明 */
+/* --- C. 表格样式 (保持透明与对齐) --- */
 .course table {
   width: 100%;
   border-collapse: collapse;
-  background-color: transparent !important; /* 关键：去除背景色块 */
+  background: transparent !important;
   border: none !important;
 }
-
-/* 2. 表头样式修复 */
 .course table th {
-  background-color: transparent !important;
-  border: none !important;
+  background: transparent !important;
   border-bottom: 2px solid var(--global-theme-color) !important;
   padding: 1rem 0.5rem !important;
-  font-weight: 700;
 }
-/* Dark Mode 表头适配 */
-body.dark .course table th,
-body.dark-mode .course table th {
-  border-bottom: 2px solid #FF9EBF !important; 
-  color: #FF9EBF !important; 
-}
-
-/* 3. 单元格样式修复 */
 .course table td {
-  background-color: transparent !important;
-  border: none !important;
+  background: transparent !important;
   border-bottom: 1px solid rgba(0,0,0,0.05) !important;
   padding: 1.2rem 0.5rem !important;
-  vertical-align: top !important;
-}
-/* Dark Mode 单元格适配 */
-body.dark .course table td,
-body.dark-mode .course table td {
-  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-  color: #E0E0E0 !important;
 }
 
-/* --- D. 细节微调 --- */
-/* 1. Week 列居中 */
+/* 表格列宽与对齐微调 */
 .course table th:first-child,
 .course table td:first-child {
   text-align: center;
   width: 60px;
 }
-/* 2. Topic 标题在深色模式下变白 */
-body.dark .course table .fw-bold,
-body.dark-mode .course table .fw-bold {
-  color: #fff !important;
+
+/* Dark Mode 表格色彩适配 */
+body.dark, body.dark-mode, html[data-theme="dark"] {
+  .course table th { border-bottom-color: #FF9EBF !important; color: #FF9EBF !important; }
+  .course table td { border-bottom-color: rgba(255,255,255,0.1) !important; color: #E0E0E0 !important; }
+  .course table .fw-bold { color: #fff !important; }
 }
