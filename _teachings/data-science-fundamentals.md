@@ -1,13 +1,21 @@
 ---
-layout: course
-title: "<span class='course-title'>SOCI3312 城市数据分析与实践</span>"
-description:
-instructor: Dr. Yunzhe Liu
+layout: page   # 注意：有些模板这里用 page，有些用 course，如果你的布局乱了，改回 course 试试
+title: "<span class='course-main-title'>城市数据分析与实践</span><span class='course-sub-title'>Urban Data Analytics and Practice</span>"
+description: "SOCI3312"
+img: assets/img/course_cover.jpg # (可选) 如果你想在卡片上显示封面图，加上这一行
+importance: 1 # 数字越小，排在越前面
+category: work # 或者 school/university
+
+# --- 课程详细信息 ---
+instructor: "Dr. Yunzhe Liu <span class='course-id-tag'>SOCI3312</span>" 
 year: 2026
-term: 春 Spring
-location: 闵一教 · 226室
-time: 星期一, 9:50-11:25 AM
-course_id: SOCI3312 
+term: Spring
+location: "闵一教 · 226室"
+time: "星期一, 9:50-11:25 AM"
+course_id: SOCI3312
+
+# --- 下面是教学大纲等内容 ---
+related_publications: false
 schedule:
   - week: 1
     date: Feb 5
@@ -28,55 +36,10 @@ schedule:
         url: /assets/pdf/example_pdf.pdf
       - name: Assignment 1
         url: /assets/pdf/example_pdf.pdf
-
-  - week: 3
-    date: Feb 19
-    topic: Data Cleaning and Preprocessing
-    description: Techniques for handling missing values, outliers, and data transformation.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Coding Lab
-        url: https://github.com/
-
-  - week: 4
-    date: Feb 26
-    topic: Exploratory Data Analysis
-    description: Descriptive statistics, visualization, and pattern discovery.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Assignment 2
-        url: /assets/pdf/example_pdf.pdf
-
-  - week: 5
-    date: Mar 4
-    topic: Statistical Analysis
-    description: Hypothesis testing, confidence intervals, and statistical inference.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Review Materials
-        url: /assets/pdf/example_pdf.pdf
-
-  - week: 6
-    date: Mar 11
-    topic: Data Visualization
-    description: Principles and tools for effective data visualization.
-    materials:
-      - name: Lecture Notes
-        url: /assets/pdf/example_pdf.pdf
-      - name: Assignment 3
-        url: /assets/pdf/example_pdf.pdf
 ---
 
-## Course Overview
+## Course Overview (这里可以写正文)
 
-This course provides a comprehensive introduction to data science principles and practices. Students will:
-
-- Learn the end-to-end data science workflow
-- Gain practical experience with data manipulation tools
-- Develop skills in data visualization and communication
-- Apply statistical methods to derive insights from data
+This course provides a comprehensive introduction...
 
 
