@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab Final V10: 最终完美版 (含全标签系统 + 强力深色背景修复)
+ * DAWN Lab Final V12: 安全完整版 (保留原有功能 + 修复标签与深色背景)
  ******************************************************************************/
 
 @use "variables" as v;
@@ -229,14 +229,13 @@ body.dark-mode .bibliography .abbr .badge {
 .bibliography .abbr abbr:hover, .bibliography .abbr a:hover, .bibliography .abbr .badge:hover { opacity: 0.8 !important; }
 
 /* ==========================================================================
-   9. COURSE DETAIL FIXES (课程详情页最终修复)
+   9. COURSE DETAIL FIXES (课程详情页最终强力修复)
    ========================================================================== */
 
 /* --- A. 顶部信息框 (Course Info Box) --- */
 .course-info {
-  /* Light Mode */
-  background-color: #f8f9fa;
-  border-color: #dee2e6;
+  background-color: #f8f9fa; /* Light Mode Default */
+  border: 1px solid #dee2e6;
   position: relative;
 }
 
@@ -245,7 +244,8 @@ body.dark-mode .bibliography .abbr .badge {
 body.dark .course-info,
 body.dark-mode .course-info,
 body.dark .course-info.bg-light,
-body.dark-mode .course-info.bg-light {
+body.dark-mode .course-info.bg-light,
+html[data-theme="dark"] .course-info {
   background-color: #1e1e1e !important; /* ✅ 关键修复：深灰色背景 */
   border-color: #333 !important;        
   color: #e0e0e0 !important;            
@@ -253,11 +253,36 @@ body.dark-mode .course-info.bg-light {
 
 /* 修复信息框里的 strong 标签颜色 (Instructor: 等标题) */
 body.dark .course-info strong,
-body.dark-mode .course-info strong {
+body.dark-mode .course-info strong,
+html[data-theme="dark"] .course-info strong {
   color: #fff !important; 
 }
 
-/* --- B. 课程表 (Schedule Table) --- */
+/* --- B. 课程表链接 (Materials Links) --- */
+/* Light Mode */
+.schedule-materials a {
+  color: #003153 !important; 
+  text-decoration: none;
+  border-bottom: 1px dotted #003153;
+  transition: all 0.2s;
+}
+
+/* Dark Mode: 强制樱花粉 (Sakura Pink) */
+body.dark .schedule-materials a,
+body.dark-mode .schedule-materials a,
+html[data-theme="dark"] .schedule-materials a {
+  color: #FF9EBF !important; /* ✅ 关键修复：樱花粉 */
+  border-bottom-color: #FF9EBF !important;
+}
+body.dark .schedule-materials a:hover,
+body.dark-mode .schedule-materials a:hover,
+html[data-theme="dark"] .schedule-materials a:hover {
+  color: #FF6699 !important; 
+  border-bottom-color: #FF6699 !important;
+  background-color: rgba(255, 102, 153, 0.1);
+}
+
+/* --- C. 表格样式 (透明化) --- */
 /* 1. 表格整体去背景，变透明 */
 .course table {
   width: 100%;
@@ -294,28 +319,6 @@ body.dark .course table td,
 body.dark-mode .course table td {
   border-bottom: 1px solid rgba(255,255,255,0.1) !important;
   color: #E0E0E0 !important;
-}
-
-/* --- C. Materials 链接颜色 (修复看不清的问题) --- */
-/* Light Mode */
-.schedule-materials a {
-  color: #003153 !important; 
-  text-decoration: none;
-  border-bottom: 1px dotted #003153;
-  transition: all 0.2s;
-}
-
-/* Dark Mode: 强制樱花粉 */
-body.dark .schedule-materials a,
-body.dark-mode .schedule-materials a {
-  color: #FF9EBF !important; /* ✅ 关键修复：樱花粉 */
-  border-bottom-color: #FF9EBF !important;
-}
-body.dark .schedule-materials a:hover,
-body.dark-mode .schedule-materials a:hover {
-  color: #FF6699 !important; 
-  border-bottom-color: #FF6699 !important;
-  background-color: rgba(255, 102, 153, 0.1);
 }
 
 /* --- D. 细节微调 --- */
