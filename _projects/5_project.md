@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: 社会感知与数据挖掘
+description: Social Sensing & Data Mining
 img: assets/img/1.jpg
 importance: 3
 category: fun
