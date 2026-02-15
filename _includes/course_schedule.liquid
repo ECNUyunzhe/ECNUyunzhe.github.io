@@ -77,7 +77,7 @@
                         <li class="mb-2">
                           {% if material.url %}
                             <a href="{{ material.url | relative_url }}" target="_blank">
-                              <i class="fas fa-link me-1" style="font-size: 0.8em; opacity: 0.7;"></i>{{ material.name }}
+                              {{ material.name }}
                             </a>
                           {% else %}
                             <span class="text-secondary">{{ material.name }}</span>
