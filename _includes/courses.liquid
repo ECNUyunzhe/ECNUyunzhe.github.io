@@ -20,19 +20,24 @@
 
                 <div class="course-meta">
                   
-                  <div class="d-flex align-items-center flex-wrap mb-2">
+                  <div class="d-flex flex-wrap align-items-center mb-2">
                     
-                    <span class="course-instructor-name fw-bold me-3">
-                      {{ course.instructor }}
+                    <span class="course-tag-base tag-instructor">
+                      <i class="fas fa-user-circle me-1"></i>{{ course.instructor }}
                     </span>
 
                     {% if course.course_id %}
-                      <span class="course-id-tag">{{ course.course_id }}</span>
+                      <span class="course-tag-base tag-id">
+                        {{ course.course_id }}
+                      </span>
                     {% endif %}
 
                     {% if course.course_level %}
-                      <span class="course-level-tag">{{ course.course_level }}</span>
+                      <span class="course-tag-base tag-level">
+                        {{ course.course_level }}
+                      </span>
                     {% endif %}
+                    
                   </div>
 
                   <div class="text-muted small">
