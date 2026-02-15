@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 人口迁移 & 城市流动性
+title: 人口迁移 与 城市流动性
 description: Population Migration & Urban Mobility
 img: assets/img/urban_mm.jpg
 importance: 3
