@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Typography styles: Headings, text, links, tables, blockquotes
- * DAWN Lab Final V12: 安全完整版 (保留原有功能 + 修复标签与深色背景)
+ * DAWN Lab Final V13: 终极集成版 (全标签体系 + 双语标题 + 深色模式强力修复)
  ******************************************************************************/
 
 @use "variables" as v;
@@ -10,7 +10,6 @@
    ========================================================================== */
 :root {
   /* ☀️ Light Mode 默认渐变 */
-  /* 45deg = 左下角(暗) -> 右上角(亮)，模拟黎明升起 */
   --dawn-gradient: linear-gradient(45deg, #003153 0%, #4FACFE 100%);
   
   /* 课程副标题颜色 (深灰) */
@@ -19,10 +18,7 @@
 
 /* 🌙 Dark Mode 变量重写 */
 body.dark, body.dark-mode, html[data-theme="dark"] {
-  /* 渐变：热粉(#FF3377) -> 极亮白粉(#FFFFFF)，增强了亮部，更通透 */
   --dawn-gradient: linear-gradient(45deg, #FF3377 0%, #FFFFFF 100%);
-  
-  /* 课程副标题颜色 (浅灰) */
   --course-sub-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -47,7 +43,6 @@ h1, h2, h3, h4, h6, .navbar-brand, .site-title {
   letter-spacing: -0.025em !important;
 }
 
-/* 普通标题 (不带渐变，保持默认主题色) */
 h5, .card-title {
   font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif !important; 
   font-weight: 700 !important;       
@@ -58,41 +53,25 @@ h5, .card-title {
 /* ==========================================================================
    3. 页面大标题美化 (应用变量)
    ========================================================================== */
-header .post-title, 
-.post-title {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-  display: block;
-}
+header .post-title, .post-title { margin-top: 2rem !important; margin-bottom: 2rem !important; display: block; }
 
 /* 3.1 标题中的中文 (应用 --dawn-gradient 变量) */
-header .post-title .nav-cn,
-.post-title .nav-cn {
+header .post-title .nav-cn, .post-title .nav-cn {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important; 
-  font-size: 3.2rem !important;      
-  font-weight: 700 !important;       
-  display: inline-block;
-  margin-right: 15px;
-  
-  /* ✅ 核心：调用变量，自动适配黑白模式 */
+  font-size: 3.2rem !important; font-weight: 700 !important; display: inline-block; margin-right: 15px;
   background: var(--dawn-gradient) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  
   color: var(--global-theme-color); 
 }
 
 /* 3.2 标题中的英文 (小薇体 + 正文色) */
-header .post-title .nav-en,
-.post-title .nav-en {
+header .post-title .nav-en, .post-title .nav-en {
   font-family: "ZCOOL XiaoWei", serif !important; 
-  font-size: 2.8rem !important;      
-  font-weight: 400 !important;
-  color: var(--global-text-color) !important; 
-  letter-spacing: 1px !important;
-  text-transform: uppercase;         
-  vertical-align: middle;            
+  font-size: 2.8rem !important; font-weight: 400 !important;
+  color: var(--global-text-color) !important; letter-spacing: 1px !important;
+  text-transform: uppercase; vertical-align: middle;            
 }
 
 /* ==========================================================================
@@ -106,17 +85,14 @@ header .post-title .nav-en,
    5. 社交图标
    ========================================================================== */
 .social .contact-icons { font-size: 1.8rem !important; display: flex; justify-content: center; gap: 1.2rem; margin-top: 2rem; }
-.social .contact-icons .ai { vertical-align: middle !important; }
 .social .contact-icons img { width: 32px !important; height: 32px !important; margin: 0 !important; border-radius: 4px; box-shadow: none !important; filter: none !important; }
 .social .contact-icons a:hover { transform: scale(1.15); color: var(--global-theme-color) !important; }
 blockquote { background: var(--global-bg-color); border-left: 5px solid var(--global-theme-color); margin: 1.5em 0; padding: 1em; font-size: 1.1rem; border-radius: 8px; p { margin-bottom: 0; } }
 
 /* ==========================================================================
-   6. PEOPLE PAGE STYLES (成员页面)
+   6. PEOPLE PAGE STYLES
    ========================================================================== */
 .people-profile { width: 30% !important; max-width: 200px !important; min-width: 150px !important; margin-bottom: 20px !important; }
-.people-profile.float-right { margin-left: 20px !important; }
-.people-profile.float-left { margin-right: 20px !important; }
 .people-profile img { width: 100% !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important; }
 .people-profile .more-info { font-size: 0.85rem !important; line-height: 1.4 !important; margin-top: 10px !important; color: #666; }
 
@@ -126,14 +102,8 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 
 /* 7.1 中文主标题：渐变 + 粗体 */
 .course-main-title {
-  display: block; 
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1.8rem !important;  /* 较大字号 */
-  line-height: 1.2 !important;
-  margin-bottom: 6px !important;
-
-  /* 自适应渐变色 */
+  display: block; font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-weight: 700 !important; font-size: 1.8rem !important; line-height: 1.2 !important; margin-bottom: 6px !important;
   background: var(--dawn-gradient) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -142,16 +112,12 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 
 /* 7.2 英文副标题：小薇字体 + 较小字号 */
 .course-sub-title {
-  display: block;
-  font-family: "ZCOOL XiaoWei", serif !important; /* ✅ 强制小薇字体 */
-  font-weight: 400 !important;
-  font-size: 1.1rem !important; /* ✅ 显著小于中文标题 */
-  line-height: 1.4 !important;
-  color: var(--course-sub-color) !important; /* 灰度色 */
-  letter-spacing: 0.5px;
+  display: block; font-family: "ZCOOL XiaoWei", serif !important; 
+  font-weight: 400 !important; font-size: 1.1rem !important; line-height: 1.4 !important;
+  color: var(--course-sub-color) !important; letter-spacing: 0.5px;
 }
 
-/* 7.3 全标签体系基础样式 (保持不变) */
+/* 7.3 全标签体系基础样式 */
 .course-tag-base {
   display: inline-block; padding: 5px 14px; border-radius: 8px;
   font-size: 0.8rem; font-weight: 700; color: #fff !important; line-height: 1.4;
@@ -160,41 +126,44 @@ blockquote { background: var(--global-bg-color); border-left: 5px solid var(--gl
 }
 .course-tag-base i { margin-right: 8px !important; font-size: 0.9em; }
 
+/* --- 标签颜色定义 --- */
+.tag-instructor { background-color: #003153; }
+.tag-id { background-color: #6610f2; }
+.tag-level { background-color: #0f766e; }
+.tag-term { background-color: #d97706; }    /* 琥珀色 */
+.tag-location { background-color: #475569; } /* 石板灰 */
+.tag-time { background-color: #2563eb; }     /* 蓝色 */
+
+/* Dark Mode 标签颜色适配 */
+body.dark, body.dark-mode, html[data-theme="dark"] {
+  .tag-instructor { background-color: #FF6699 !important; }
+  .tag-id { background-color: #8d50f5 !important; }
+  .tag-level { background-color: #14b8a6 !important; color: #fff !important; }
+  .tag-term { background-color: #f59e0b !important; }
+  .tag-location { background-color: #94a3b8 !important; }
+  .tag-time { background-color: #60a5fa !important; }
+}
+
 /* ==========================================================================
    8. BIBLIOGRAPHY STYLES (参考文献分区缎带)
    ========================================================================== */
-/* Light Mode */
 body:not(.dark):not(.dark-mode) .bibliography .abbr abbr,
 body:not(.dark):not(.dark-mode) .bibliography .abbr a,
 body:not(.dark):not(.dark-mode) .bibliography .abbr .badge {
-  color: #003153 !important;       
-  background-color: #e6f0f5 !important; 
-  border: 1px solid #003153 !important; 
-  box-shadow: none !important; opacity: 1 !important; 
+  color: #003153 !important; background-color: #e6f0f5 !important; border: 1px solid #003153 !important; box-shadow: none !important; opacity: 1 !important; 
 }
-
-/* Dark Mode */
-body.dark .bibliography .abbr abbr,
-body.dark .bibliography .abbr a,
-body.dark .bibliography .abbr .badge,
-body.dark-mode .bibliography .abbr abbr,
-body.dark-mode .bibliography .abbr a,
-body.dark-mode .bibliography .abbr .badge {
-  color: #FF6699 !important;       
-  background-color: #2d2d2d !important; 
-  border: 1px solid #FF6699 !important;
-  box-shadow: none !important;
+body.dark .bibliography .abbr abbr, body.dark .bibliography .abbr a, body.dark .bibliography .abbr .badge,
+body.dark-mode .bibliography .abbr abbr, body.dark-mode .bibliography .abbr a, body.dark-mode .bibliography .abbr .badge {
+  color: #FF6699 !important; background-color: #2d2d2d !important; border: 1px solid #FF6699 !important; box-shadow: none !important;
 }
-.bibliography .abbr abbr:hover, .bibliography .abbr a:hover, .bibliography .abbr .badge:hover { opacity: 0.8 !important; }
 
 /* =======================================================
    9. COURSE DETAIL FIXES (布局与表格修复)
    ======================================================= */
 
-/* --- A. 彻底去掉边框和背景框 --- */
-.course-info,
-.course-info-tags {
-  background-color: transparent !important; /* 跟随网页背景 */
+/* --- A. 彻底去掉边框和背景框 (实现透明无缝感) --- */
+.course-info, .course-info-tags {
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
@@ -203,10 +172,8 @@ body.dark-mode .bibliography .abbr .badge {
 
 /* --- B. 课程表链接 (樱花粉修复) --- */
 .schedule-materials a {
-  color: #003153 !important;
-  text-decoration: none;
-  border-bottom: 1px dotted #003153;
-  transition: all 0.2s;
+  color: #003153 !important; text-decoration: none;
+  border-bottom: 1px dotted #003153; transition: all 0.2s;
 }
 
 /* Dark Mode 强制樱花粉 */
@@ -222,29 +189,10 @@ body.dark, body.dark-mode, html[data-theme="dark"] {
 }
 
 /* --- C. 表格样式 (保持透明与对齐) --- */
-.course table {
-  width: 100%;
-  border-collapse: collapse;
-  background: transparent !important;
-  border: none !important;
-}
-.course table th {
-  background: transparent !important;
-  border-bottom: 2px solid var(--global-theme-color) !important;
-  padding: 1rem 0.5rem !important;
-}
-.course table td {
-  background: transparent !important;
-  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
-  padding: 1.2rem 0.5rem !important;
-}
-
-/* 表格列宽与对齐微调 */
-.course table th:first-child,
-.course table td:first-child {
-  text-align: center;
-  width: 60px;
-}
+.course table { width: 100%; border-collapse: collapse; background: transparent !important; border: none !important; }
+.course table th { background: transparent !important; border-bottom: 2px solid var(--global-theme-color) !important; padding: 1rem 0.5rem !important; }
+.course table td { background: transparent !important; border-bottom: 1px solid rgba(0,0,0,0.05) !important; padding: 1.2rem 0.5rem !important; }
+.course table th:first-child, .course table td:first-child { text-align: center; width: 60px; }
 
 /* Dark Mode 表格色彩适配 */
 body.dark, body.dark-mode, html[data-theme="dark"] {
