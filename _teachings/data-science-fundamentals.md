@@ -39,11 +39,18 @@ schedule:
     description: "Introduction to RStudio & R Markdown"
     materials:
       - name: "课程教程"
-        url: "/assets/html/第零章.html"
+        url: "/assets/html/第一章.html"
 
   - week: 2
     topic: "第2章：数据处理与探索性数据分析"
     description: "Basic Data Processing & EDA"
+    materials:
+      - name: "课程教程"
+        url: "/assets/html/第2章.html"
+        
+  - week: 3
+    topic: "第3章：数据可视化 1: ggplot2"
+    description: "Data Visualisation 1: ggplot2"
     materials:
       - name: "课程教程"
         url: "/assets/html/第2章.html"
