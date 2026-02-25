@@ -416,7 +416,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-城市活力-与-韧性",
+          section: "News",},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-城市活力-与-韧性",
           title: '城市活力 与 韧性',
           description: "Urban Vitality &amp; Resilience",
           section: "Projects",handler: () => {
