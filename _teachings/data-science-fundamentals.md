@@ -53,7 +53,7 @@ schedule:
     description: "Data Visualisation 1: ggplot2"
     materials:
       - name: "课程教程"
-        url: "/assets/html/第2章.html"
+        url: "/assets/html/第3章.html"
 
   - week: 4
     topic: "第4章：数据可视化 2: 空间制图"
