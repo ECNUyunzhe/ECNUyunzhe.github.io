@@ -1,6 +1,7 @@
 ---
 layout: page title: 城市感知 description: Urban Perception img: assets/img/urban_p.jpg importance: 1 category: work related_publications: true
 ---
+
 **城市感知（Urban Perception）**是指城市居民对城市物理环境的主观体验、认知与心理评价。作为连接人与建成环境的重要桥梁，城市感知不仅反映了城市空间的视觉与形态特征，更深刻影响着居民的心理健康、时空行为选择以及整体的生活幸福感。传统的城市感知研究多依赖于问卷调查或小规模实地走访，不仅耗时耗力，且难以满足现代城市精细化管理对大尺度、高空间分辨率数据的需求。
 
 <div class="row">
