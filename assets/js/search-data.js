@@ -456,16 +456,16 @@ ninja.data = [{
           description: "Open Science &amp; Open Data",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-多源城市数据分析与实践multi-source-urban-data-analytics-and-practice",
-          title: '多源城市数据分析与实践Multi-source Urban Data Analytics and Practice',
-          description: "",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
           title: '城市数据分析与实践Urban Data Analytics and Practice',
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/urban-data-analytics-26/";
+            },},{id: "teachings-多源城市数据分析与实践multi-source-urban-data-analytics-and-practice",
+          title: '多源城市数据分析与实践Multi-source Urban Data Analytics and Practice',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/urban-data-analytics-msc-26/";
             },},{
         id: 'social-email',
         title: 'email',
