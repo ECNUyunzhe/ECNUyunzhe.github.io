@@ -35,7 +35,7 @@ ninja.data = [{
           description: "Collaborators of the DAWN group",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/people/";
+            window.location.href = "/Collaborator/";
           },
         },{id: "post-a-post-with-plotly-js",
         
