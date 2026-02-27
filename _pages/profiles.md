@@ -1,8 +1,8 @@
 ---
 layout: profiles
 permalink: /people/
-title: "<span class='nav-cn'>成员</span><span class='nav-en'>Members</span>"
-description: Members of the group
+title: "<span class='nav-cn'>合作成员</span><span class='nav-en'>Collaborator</span>"
+description: Collaborators of the DAWN group
 nav: true
 nav_order: 7
 
@@ -18,4 +18,10 @@ profiles:
       <p>法商北楼 508室</p>
 
   # 如果目前只有你一个人，可以删掉下面爱因斯坦的占位块
+  - align: left
+    image: meixu_pic.jpg
+    content: about_meixu.md  # 关联我们刚才创建的文件
+    image_circular: false
+    more_info: >
+      <p><b>华东理工大学 社会与公共管理学院</b></p>
 ---
