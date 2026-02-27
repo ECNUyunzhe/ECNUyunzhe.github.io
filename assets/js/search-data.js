@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-lt-span-class-39-nav-cn-39-gt-合作成员-lt-span-gt-lt-span-class-39-nav-en-39-gt-collaborator-lt-span-gt",
-          title: "&lt;span class=&#39;nav-cn&#39;&gt;合作成员&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Collaborator&lt;/span&gt;",
-          description: "Collaborators of the DAWN group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/Collaborator/";
-          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
