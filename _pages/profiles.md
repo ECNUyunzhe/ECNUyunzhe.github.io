@@ -3,7 +3,7 @@ layout: profiles
 permalink: /Collaborator/
 title: "<span class='nav-cn'>合作成员</span><span class='nav-en'>Collaborator</span>"
 description: Collaborators of the DAWN group
-nav: true
+nav: false
 nav_order: 7
 
 profiles:
