@@ -57,7 +57,7 @@ schedule:
 
   - week: 4
     topic: "第4章：数据可视化 2: 空间制图"
-    description: "Data Visualisation 2: Geo-visulisation"
+    description: "Data Visualisation 2: Geo-Visualisation"
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
