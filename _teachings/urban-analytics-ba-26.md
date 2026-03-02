@@ -22,7 +22,7 @@ course_level: "本科生 · 专业选修"
 year: 2026
 term: "2026 · 春"
 location: "闵一教 · 226室"
-time: "星期一, 9:50-11:25 AM"
+time: "星期一 · 9:50-11:25 AM"
 
 # --- 教学大纲 ---
 related_publications: false
