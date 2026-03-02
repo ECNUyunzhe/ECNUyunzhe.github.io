@@ -53,6 +53,9 @@ Positioned at the cutting-edge intersection of **Computational Social Science, D
 
 </div>
 
+<div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+  <img src="https://api.visitorbadge.io/api/visitors?path=https://dawn-ecnu.github.io&countColor=%23263759" alt="Visitors" />
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const checkbox = document.getElementById('lang-checkbox');
