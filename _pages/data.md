@@ -10,7 +10,7 @@ nav_order: 5
 datasets:
   - name: "上海市边界"
     desc: "上海市行政边界底图数据"
-    icon: "fas fa-vector-square" # 兼容性极好的面/多边形图标
+    icon: "fas fa-map" # 兼容性极好的面/多边形图标
     type: ".geojson"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/shanghai_boundary.geojson"
     
