@@ -40,6 +40,8 @@ schedule:
     materials:
       - name: "课程教程"
         url: "/assets/html/第一章.html"
+      - name: "课件（ppt）"
+        url: "/assets/ppt/第一周.ppt"  
 
   - week: 2
     topic: "第2章：数据处理与探索性数据分析"
