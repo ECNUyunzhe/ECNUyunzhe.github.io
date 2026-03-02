@@ -15,7 +15,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: "刘贇喆, 华东师范大学, ECNU, DAWN Research Group, 计算社会科学, 空间分异, GeoAI, Yunzhe Liu, Computational Social Science, Urban Analytics"
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: assets/img/logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://dawn-ecnu.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
