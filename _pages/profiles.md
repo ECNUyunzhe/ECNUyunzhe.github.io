@@ -18,7 +18,7 @@ profiles:
   # 如果目前只有你一个人，可以删掉下面爱因斯坦的占位块
   - align: left
     image: meixu_pic.jpg
-    content: about_meixu.md  # 关联我们刚才创建的文件
+    content: about_yunzhe.md  # 关联我们刚才创建的文件
     image_circular: false
     more_info: >
       <p><b>华东理工大学</b></p>
