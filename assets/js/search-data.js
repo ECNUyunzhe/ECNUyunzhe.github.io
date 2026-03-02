@@ -23,8 +23,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-lt-span-class-39-nav-cn-39-gt-数据下载-lt-span-gt-lt-span-class-39-nav-en-39-gt-data-lt-span-gt",
-          title: "&lt;span class=&#39;nav-cn&#39;&gt;数据下载&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Data&lt;/span&gt;",
+        },{id: "nav-lt-span-class-39-nav-cn-39-gt-数据-lt-span-gt-lt-span-class-39-nav-en-39-gt-data-lt-span-gt",
+          title: "&lt;span class=&#39;nav-cn&#39;&gt;数据&lt;/span&gt;&lt;span class=&#39;nav-en&#39;&gt;Data&lt;/span&gt;",
           description: "课程练习与研究示例数据集 (Datasets for Practice &amp; Research)",
           section: "Navigation",
           handler: () => {
