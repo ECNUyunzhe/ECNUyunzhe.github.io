@@ -30,7 +30,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: v.$max-content-width;
+  max-width: v.$max-content-width; // 自动读取你 config 中的 1100px
 }
 
 // Profile
@@ -39,10 +39,6 @@ body.sticky-bottom-footer {
     width: 100%;
   }
 }
-
-// Content layout uses Bootstrap's grid system with responsive columns
-// Main content flows naturally through container-mt-5 and Bootstrap grid classes
-// See _layouts/default.liquid and _includes/projects.liquid for examples
 
 /******************************************************************************
  * Publications
@@ -55,4 +51,79 @@ body.sticky-bottom-footer {
 * Projects
 *****************************************************************************/
 
-// TODO: redefine projects layout.
+.projects {
+  margin-top: 2rem;
+
+  /* 项目网格卡片容器 */
+  .grid-item {
+    padding: 15px;
+
+    .card {
+      border: none !important;
+      background-color: var(--global-card-bg-color) !important;
+      border-radius: 12px !important; // 核心：12px 圆角
+      overflow: hidden; // 确保内部图片不超出圆角
+      transition: all 0.3s ease-in-out !important; // 全局平滑过渡
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; // 基础柔和阴影
+
+      /* 卡片顶部图片 */
+      img, .card-img {
+        border-radius: 12px 12px 0 0 !important; // 图片仅上方圆角
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease !important; // 图片放大过渡更慢一点，更有质感
+      }
+
+      /* 鼠标悬停时的交互动效 */
+      &:hover {
+        transform: translateY(-8px); // 向上浮起
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important; // 阴影变深变大
+
+        /* 悬停时图片轻微放大 4% */
+        img {
+          transform: scale(1.04);
+        }
+      }
+
+      /* 卡片内部文字区域 */
+      .card-body {
+        padding: 1.25rem;
+        
+        .card-title {
+          color: var(--global-theme-color); // 标题自动跟随你的 普鲁士蓝/樱花粉
+          font-weight: 700;
+          margin-bottom: 0.75rem;
+        }
+
+        .card-text {
+          color: var(--global-text-color);
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+      }
+
+      /* 项目标签 (如有) */
+      .badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: var(--global-theme-color);
+        color: var(--global-hover-text-color);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/* --- 暗黑模式专门适配 (Dark Mode) --- */
+html[data-theme='dark'] {
+  .projects .grid-item .card {
+    /* 深色背景下阴影需要显著加强才能产生立体感 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    
+    &:hover {
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8) !important;
+      background-color: var(--global-code-bg-color) !important; // 悬停时稍微变亮一点点
+    }
+  }
+}
