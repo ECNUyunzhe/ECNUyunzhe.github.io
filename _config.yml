@@ -44,7 +44,7 @@ repo_trophies:
 
 # External service URLs for repository page
 # To use a different instance or service for displaying GitHub stats and trophies,
-# update these URLs. These are used in the repository templates.
+# update these URLs. These are used in the repository templates. 
 external_services:
   github_readme_stats_url: https://github-readme-stats.vercel.app
   github_profile_trophy_url: https://github-profile-trophy.vercel.app
