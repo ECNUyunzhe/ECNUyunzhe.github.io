@@ -2,41 +2,38 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: DAWN Research Group | Dr. Yunzhe Liu # 网站标题
+title: DAWN Research Group | Dr. Yunzhe Liu
 first_name: Yunzhe
 middle_name: 
 last_name: Liu
 contact_note: >
   email: yzliu@soci.ecnu.edu.cn
-description: > # 搜索引擎优化的核心描述
+description: >
   Official website of the DAWN (Data Analytics for Well-being & Neighborhoods) Research Group, led by Dr. Yunzhe Liu at East China Normal University. 华东师范大学 DAWN 课题组 (福祉·邻里·数据分析) 官方网站，专注于计算社会科学、地理人工智能 (GeoAI) 与社会空间分异研究。
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: "刘贇喆, 华东师范大学, ECNU, DAWN Research Group, 计算社会科学, 空间分异, GeoAI, Yunzhe Liu, Computational Social Science, Urban Analytics" 
 lang: en 
-icon: logo.webp
+icon: /assets/img/logo.png
 
-# 【核心修正】确保这里与你的仓库名一致
+# 【核心修正】必须匹配你现在的仓库名，否则 GitHub Pages 无法正确部署
 url: https://dawn-ecnu.github.io 
-baseurl:  
+baseurl: "" 
 last_updated: true 
 impressum_path: 
 back_to_top: true 
 
 # -----------------------------------------------------------------------------
-# Author Info (Google Scholar & SEO 抓取关键)
+# Author Info (SEO 抓取关键)
 # -----------------------------------------------------------------------------
-
 author:
   name: Yunzhe Liu
   email: yzliu@soci.ecnu.edu.cn
-  # google_scholar: https://scholar.google.com/citations?user=你的ID # 有了ID后再填入
 
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
-
 repo_theme_light: default 
 repo_theme_dark: dark 
 repo_trophies:
@@ -49,9 +46,8 @@ external_services:
   github_profile_trophy_url: https://github-profile-trophy.vercel.app
 
 # -----------------------------------------------------------------------------
-# Layout & Search
+# Layout
 # -----------------------------------------------------------------------------
-
 navbar_fixed: true
 footer_fixed: true
 search_enabled: false
@@ -61,32 +57,19 @@ bib_search: true
 max_width: 1100px
 
 # -----------------------------------------------------------------------------
-# Open Graph & Schema.org (社交媒体预览优化)
+# Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 serve_og_meta: true 
 serve_schema_org: true 
-og_image: # 可以放一张课题组合照链接作为预览图
-
-# -----------------------------------------------------------------------------
-# Analytics and Verification
-# -----------------------------------------------------------------------------
-
-google_analytics: # 格式: G-XXXXXXXXXX
-google_site_verification: # Google Search Console 验证码
-bing_site_verification: 
 
 # -----------------------------------------------------------------------------
 # Blog & Collections
 # -----------------------------------------------------------------------------
-
 blog_name: DAWN Blog
-blog_description: Research insights and group updates.
+blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 pagination:
   enabled: true
-related_blog_posts:
-  enabled: true
-  max_related: 5
 
 collections:
   books:
@@ -103,7 +86,6 @@ collections:
 # -----------------------------------------------------------------------------
 # Jekyll settings & Plugins
 # -----------------------------------------------------------------------------
-
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -142,16 +124,11 @@ plugins:
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-socials
-  - jekyll-tabs
-  - jekyll-terser
-  - jekyll-toc
-  - jekyll-twitter-plugin
   - jemoji
 
 # -----------------------------------------------------------------------------
-# Jekyll Scholar (学术论文自动排版配置)
+# Jekyll Scholar
 # -----------------------------------------------------------------------------
-
 scholar:
   last_name: [Liu]
   first_name: [Yunzhe, Y.]
@@ -162,44 +139,31 @@ scholar:
   group_by: year
   group_order: descending
 
-enable_publication_badges:
-  altmetric: true 
-  dimensions: true 
-  google_scholar: true 
-
 # -----------------------------------------------------------------------------
-# Responsive Images (Imagemagick)
+# Imagemagick
 # -----------------------------------------------------------------------------
-
 imagemagick:
   enabled: true 
-  widths:
-    - 480
-    - 800
-    - 1400
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".jpg"
-    - ".jpeg"
-    - ".png"
+  widths: [480, 800, 1400]
+  input_directories: ["assets/img/"]
+  input_formats: [".jpg", ".jpeg", ".png", ".webp"]
   output_formats:
     webp: "-auto-orient -quality 85"
-
-lazy_loading_images: true
 
 # -----------------------------------------------------------------------------
 # Optional Features
 # -----------------------------------------------------------------------------
-
 enable_google_analytics: false 
 enable_google_verification: false 
 enable_darkmode: true 
-enable_navbar_social: false 
 enable_progressbar: true 
 enable_masonry: true 
 enable_math: true 
 
+# -----------------------------------------------------------------------------
+# 以下 Library Versions 建议保留你原来 config 的完整列表
+# -----------------------------------------------------------------------------
+# (由于回复字数限制，请在此行下方粘贴你原来文件中从 'third_party_libraries:' 开始的所有内容)
 # -----------------------------------------------------------------------------
 # Library Versions (保持原样)
 # -----------------------------------------------------------------------------
