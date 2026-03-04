@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-16'
+  last_updated: '2026-03-04'
 papers:
   vR-ZpaEAAAAJ:2osOgNQ5qMEC:
     citations: 70
@@ -10,11 +10,11 @@ papers:
     title: "Tracking Changes in Mobility Before and After the First SARS-CoV-2 Vaccination Using Global Positioning System Data in England and Wales (Virus Watch): Prospective \u2026"
     year: '2023'
   vR-ZpaEAAAAJ:4TOpqqG69KYC:
-    citations: 11
+    citations: 12
     title: Health and associated economic benefits of reduced air pollution and increased physical activity from climate change policies in the UK
     year: '2025'
   vR-ZpaEAAAAJ:5nxA0vEk-isC:
-    citations: 38
+    citations: 39
     title: Uncertainty-aware interpretable deep learning for slum mapping and monitoring
     year: '2022'
   vR-ZpaEAAAAJ:8k81kl-MbHgC:
@@ -22,7 +22,7 @@ papers:
     title: 'Human mobility variations in response to restriction policies during the COVID-19 pandemic: an analysis from the Virus Watch community cohort in England, UK'
     year: '2022'
   vR-ZpaEAAAAJ:KlAtU1dfN6UC:
-    citations: 46
+    citations: 53
     title: 'Crowdsourcing geospatial data for earth and human observations: A review'
     year: '2024'
   vR-ZpaEAAAAJ:M3ejUd6NZC8C:
@@ -30,7 +30,7 @@ papers:
     title: Urban Vibrancy Resilience of New York City Neighbourhoods Across Pre-, Peri-, and Post-Pandemic Periods via Geodemographic Classification
     year: '2025'
   vR-ZpaEAAAAJ:MXK_kJrjxJIC:
-    citations: 54
+    citations: 56
     title: An interpretable machine learning framework for measuring urban perceptions from panoramic street view images
     year: '2023'
   vR-ZpaEAAAAJ:Se3iqnhoufwC:
@@ -38,7 +38,7 @@ papers:
     title: 'Trends, patterns and psychological influences on COVID-19 vaccination intention: Findings from a large prospective community cohort study in England and Wales (Virus Watch)'
     year: '2021'
   vR-ZpaEAAAAJ:ULOm3_A8WrAC:
-    citations: 25
+    citations: 27
     title: 'Investigating the potential of crowdsourced street-level imagery in understanding the spatiotemporal dynamics of cities: A case study of walkability in Inner London'
     year: '2024'
   vR-ZpaEAAAAJ:UebtZRa9Y70C:
@@ -62,7 +62,7 @@ papers:
     title: Impact of net zero policy scenarios on air pollution inequalities in England and Wales
     year: '2024'
   vR-ZpaEAAAAJ:Zph67rFs4hoC:
-    citations: 15
+    citations: 16
     title: 'Vivid London: Assessing the resilience of urban vibrancy during the COVID-19 pandemic using social media data'
     year: '2024'
   vR-ZpaEAAAAJ:_kc_bZDykSQC:
