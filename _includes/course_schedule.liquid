@@ -82,10 +82,11 @@
                       {% for material in entry.materials %}
                         <li class="mb-2">
                           {% if material.url %}
-                            <a href="{{ material.url | relative_url }}" target="_blank">
+                            <a href="{{ material.url | relative_url }}" target="_blank" class="auto-date-link">
                               <i class="fas fa-link me-1" style="font-size: 0.8em; opacity: 0.7;"></i>{{ material.name }}
                             </a>
-                          {% else %}
+                            <span class="file-date text-muted" style="font-size: 0.85em; margin-left: 5px;"></span>
+                            {% else %}
                             <span class="text-secondary">{{ material.name }}</span>
                           {% endif %}
                         </li>

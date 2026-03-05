@@ -8,3 +8,40 @@ layout: page
     {{ content }}
   </article>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 找到所有带有 auto-date-link 的链接
+  const links = document.querySelectorAll('.auto-date-link');
+  
+  links.forEach(async (link) => {
+    try {
+      // 发送 HEAD 请求，只获取文件头信息，不下载文件实体
+      const response = await fetch(link.href, { method: 'HEAD' });
+      
+      if (response.ok) {
+        // 读取 Last-Modified 字段
+        const lastModified = response.headers.get('Last-Modified');
+        
+        if (lastModified) {
+          const date = new Date(lastModified);
+          
+          // 将日期格式化为 YYYY-MM-DD
+          const formattedDate = date.getFullYear() + '-' + 
+                                String(date.getMonth() + 1).padStart(2, '0') + '-' + 
+                                String(date.getDate()).padStart(2, '0');
+          
+          // 找到紧跟在 <a> 标签后面的那个 <span class="file-date">
+          const dateSpan = link.nextElementSibling;
+          if (dateSpan && dateSpan.classList.contains('file-date')) {
+            // 填入日期文字
+            dateSpan.textContent = `(更新于: ${formattedDate})`;
+          }
+        }
+      }
+    } catch (error) {
+      console.error("无法获取文件日期:", link.href);
+    }
+  });
+});
+</script>
