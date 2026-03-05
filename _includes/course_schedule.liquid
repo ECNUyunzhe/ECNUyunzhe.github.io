@@ -54,10 +54,11 @@
     {% if course.schedule %}
       <h2 class="mt-5 mb-4">Schedule</h2>
       <div class="table-responsive">
-        <table class="table">
+        <table class="table align-middle">
           <thead>
             <tr>
               <th class="text-center" style="width: 80px;">Week</th>
+              <th class="text-center" style="width: 100px;">Module</th>
               <th>Topic</th>
               <th>Materials</th>
             </tr>
@@ -66,6 +67,20 @@
             {% for entry in course.schedule %}
               <tr>
                 <td class="text-center">{{ entry.week }}</td>
+                
+                <td class="text-center">
+                  {% if entry.type %}
+                    {% if entry.type == '软件安装' %}
+                      <span class="badge rounded-pill" style="background-color: #6c757d; font-weight: 500; padding: 0.5em 0.8em;">{{ entry.type }}</span>
+                    {% elsif entry.type == '基础章节' %}
+                      <span class="badge rounded-pill" style="background-color: #0d6efd; font-weight: 500; padding: 0.5em 0.8em;">{{ entry.type }}</span>
+                    {% elsif entry.type == '专题章节' %}
+                      <span class="badge rounded-pill" style="background-color: #198754; font-weight: 500; padding: 0.5em 0.8em;">{{ entry.type }}</span>
+                    {% else %}
+                      <span class="badge rounded-pill bg-dark" style="font-weight: 500; padding: 0.5em 0.8em;">{{ entry.type }}</span>
+                    {% endif %}
+                  {% endif %}
+                </td>
                 <td>
                   {% if entry.topic %}
                     <div class="fw-bold" style="font-size: 1.05rem;">{{ entry.topic }}</div>
@@ -86,7 +101,7 @@
                               <i class="fas fa-link me-1" style="font-size: 0.8em; opacity: 0.7;"></i>{{ material.name }}
                             </a>
                             <span class="file-date text-muted" style="font-size: 0.85em; margin-left: 5px;"></span>
-                            {% else %}
+                          {% else %}
                             <span class="text-secondary">{{ material.name }}</span>
                           {% endif %}
                         </li>

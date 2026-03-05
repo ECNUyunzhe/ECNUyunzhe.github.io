@@ -28,6 +28,7 @@ time: "星期一 · 9:50-11:25 AM"
 related_publications: false
 schedule:
   - week: 0
+    type: "软件安装" # 👈 新增标签
     topic: "第0章：环境搭建与准备"
     description: "Chapter 0: Environment & Tools Setup"
     materials:
@@ -35,6 +36,7 @@ schedule:
         url: "/assets/html/第零章.html"
 
   - week: 1
+    type: "基础章节" # 👈 新增标签
     topic: "第1章：RStudio与R Markdown入门"
     description: "Introduction to RStudio & R Markdown"
     materials:
@@ -44,6 +46,7 @@ schedule:
         url: "/assets/ppt/第一章.pptx"  
 
   - week: 2
+    type: "基础章节" # 👈 新增标签
     topic: "第2章：数据处理与探索性数据分析"
     description: "Basic Data Processing & EDA"
     materials:
@@ -51,6 +54,7 @@ schedule:
         url: "/assets/html/第2章.html"
         
   - week: 3
+    type: "基础章节" # 👈 新增标签
     topic: "第3章：数据可视化 1: ggplot2"
     description: "Data Visualisation 1: ggplot2"
     materials:
@@ -58,9 +62,16 @@ schedule:
         url: "/assets/html/第3章.html"
 
   - week: 4
+    type: "基础章节" # 👈 新增标签
     topic: "第4章：数据可视化 2: 空间制图"
     description: "Data Visualisation 2: Geo-Visualisation"
     materials:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
+
+  # 后续你可以这样添加：
+  # - week: 5
+  #   type: "专题章节"
+  #   topic: "第5章：xxxx"
+  #   ...
 ---

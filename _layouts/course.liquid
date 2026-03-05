@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
           // 找到紧跟在 <a> 标签后面的那个 <span class="file-date">
           const dateSpan = link.nextElementSibling;
           if (dateSpan && dateSpan.classList.contains('file-date')) {
-            // 填入日期文字
-            dateSpan.textContent = `(更新于: ${formattedDate})`;
+            // 👇 这里修改了显示的文字，去掉了“更新于：”，只保留了括号和日期 👇
+            dateSpan.textContent = `(${formattedDate})`;
           }
         }
       }
