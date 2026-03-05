@@ -461,8 +461,8 @@ ninja.data = [{
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/urban-analytics-ba-26/";
-            },},{id: "teachings-多源城市数据分析与实践multi-source-urban-data-analytics-and-practice",
-          title: '多源城市数据分析与实践Multi-source Urban Data Analytics and Practice',
+            },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
+          title: '城市数据分析与实践Urban Data Analytics and Practice',
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/urban-analytics-msc-26/";
