@@ -1,7 +1,7 @@
 ---
 layout: course
 # 1. 标题：保持 HTML 写法，为了实现双语渐变效果
-title: "<span class='course-main-title'>城市数据分析与实践</span><span class='course-sub-title'>Urban Data Analytics and Practice</span>"
+title: "<span class='course-main-title'>多源城市数据分析与实践</span><span class='course-sub-title'>Multi-source Urban Data Analytics and Practice</span>"
 
 # 2. 描述
 description: ""
@@ -17,12 +17,12 @@ category: work
 instructor: "Dr. Yunzhe Liu"
 
 # 5. 课程编号
-course_id: "SOCI3312"
-course_level: "本科生 · 专业选修"
+course_id: "SOCI69001"
+course_level: "研究生 · 专业选修"
 year: 2026
 term: "2026 · 春"
-location: "闵一教 · 226室"
-time: "星期一 · 9:50-11:25 AM"
+location: "闵法商南楼 · 402室"
+time: "星期一 · 14:50-16:25 PM"
 
 # --- 教学大纲 ---
 related_publications: false
