@@ -17,7 +17,7 @@ datasets:
   - name: "纽约市网约车采样数据"
     desc: "2026年1月纽约市网约车10%采样数据"
     icon: "fas fa-table" # 兼容性极好的面/多边形图标
-    type: ".geojson"
+    type: ".csv"
     url: "https://github.com/DAWN-ECNU/Example_data/raw/main/nyc_taxi_202601_sample.csv"    
     
   - name: "上海市边界"
