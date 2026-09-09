@@ -456,8 +456,8 @@ ninja.data = [{
           description: "Open Science &amp; Open Data",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-城市数据分析与实践urban-data-analytics-and-practice",
-          title: '城市数据分析与实践Urban Data Analytics and Practice',
+            },},{id: "teachings-多源数据分析与实践multi-source-data-analytics-and-practice",
+          title: '多源数据分析与实践Multi-source Data Analytics and Practice',
           description: "",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/urban-analytics-ba-26/";
