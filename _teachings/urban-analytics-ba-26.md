@@ -1,7 +1,7 @@
 ---
 layout: course
 # 1. 标题：保持 HTML 写法，为了实现双语渐变效果
-title: "<span class='course-main-title'>城市数据分析与实践</span><span class='course-sub-title'>Urban Data Analytics and Practice</span>"
+title: "<span class='course-main-title'>多源数据分析与实践</span><span class='course-sub-title'>Multi-source Data Analytics and Practice</span>"
 
 # 2. 描述
 description: ""
@@ -17,12 +17,12 @@ category: work
 instructor: "Dr. Yunzhe Liu"
 
 # 5. 课程编号
-course_id: "SOCI3312"
+course_id: "SOCI235.01"
 course_level: "本科生 · 专业选修"
 year: 2026
-term: "2026 · 春"
-location: "闵一教 · 226室"
-time: "星期一 · 9:50-11:25 AM"
+term: "2026年 秋"
+location: "闵二教 110"
+time: "星期二 10：40 - 12：15"
 
 # --- 教学大纲 ---
 related_publications: false
@@ -43,9 +43,9 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第一章.html"
       - name: "课件 (第一节课ppt)"
-        url: "/assets/ppt/第一周_ba.pptx" 
+        url: "/assets/ppt/第一周_ba.pptx"
       - name: "课件 (第二节课ppt)"
-        url: "/assets/ppt/第二周_ba.pptx" 
+        url: "/assets/ppt/第二周_ba.pptx"
 
   - week: 2
     type: "基础章节" # 👈 新增标签
@@ -55,8 +55,8 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第2章.html"
       - name: "课件 (第三节课ppt)"
-        url: "/assets/ppt/第三周_ba.pptx" 
-        
+        url: "/assets/ppt/第三周_ba.pptx"
+
   - week: 3
     type: "基础章节" # 👈 新增标签
     topic: "第3章：数据可视化 1: ggplot2"
@@ -65,7 +65,7 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第3章.html"
       - name: "课件 (第四节课ppt)"
-        url: "/assets/ppt/第四周_ba.pptx" 
+        url: "/assets/ppt/第四周_ba.pptx"
 
   - week: 4
     type: "基础章节" # 👈 新增标签
@@ -75,8 +75,8 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第4章.html"
       - name: "课件 (第五节课ppt)"
-        url: "/assets/ppt/第五周_ba.pptx" 
-        
+        url: "/assets/ppt/第五周_ba.pptx"
+
   - week: 5
     type: "专题章节" # 👈 新增标签
     topic: "第5章：专题1: 点数据分析"
@@ -85,10 +85,10 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第5章.html"
       - name: "课件 (第七节课ppt) （清明假期）"
-        url: "/assets/ppt/第七周_ba.pptx" 
+        url: "/assets/ppt/第七周_ba.pptx"
       - name: "课件 (第八节课ppt)"
-        url: "/assets/ppt/第八周_ba.pptx" 
-  
+        url: "/assets/ppt/第八周_ba.pptx"
+
   - week: 6
     type: "专题章节" # 👈 新增标签
     topic: "第6章：专题2: 图与网络分析"
@@ -97,10 +97,10 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第6章.html"
       - name: "课件 (第九节课ppt) （五一假期）"
-        url: "/assets/ppt/第九周_ba.pptx" 
+        url: "/assets/ppt/第九周_ba.pptx"
       - name: "课件 (第十一节课ppt) （五一假期）"
-        url: "/assets/ppt/第十一周_ba.pptx" 
-    
+        url: "/assets/ppt/第十一周_ba.pptx"
+
   - week: 7
     type: "专题章节" # 👈 新增标签
     topic: "第7章：专题3: 人口普查与地理人口特征分类"
@@ -109,10 +109,10 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第7章.html"
       - name: "课件 (第十二节课ppt) "
-        url: "/assets/ppt/第十二周_msc.pptx" 
+        url: "/assets/ppt/第十二周_msc.pptx"
       - name: "讲座 (第十三节课ppt) "
-        url: "/assets/ppt/讲座.pptx" 
-        
+        url: "/assets/ppt/讲座.pptx"
+
   - week: 8
     type: "专题章节" # 👈 新增标签
     topic: "第8章：专题4: 综合指数构建"
@@ -121,9 +121,9 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第8章.html"
       - name: "课件 (第十四节课ppt) "
-        url: "/assets/ppt/第十四周_msc.pptx" 
+        url: "/assets/ppt/第十四周_msc.pptx"
       - name: "课件 (第十五节课ppt) "
-        url: "/assets/ppt/第十五周_ba.pptx" 
+        url: "/assets/ppt/第十五周_ba.pptx"
 
   - week: 9
     type: "专题章节" # 👈 新增标签
@@ -133,9 +133,8 @@ schedule:
       - name: "课程教程"
         url: "/assets/html/第9章.html"
       # - name: "课件 (第十四节课ppt) "
-      #   url: "/assets/ppt/第十四周_msc.pptx" 
+      #   url: "/assets/ppt/第十四周_msc.pptx"
 
-        
   # 后续你可以这样添加：
   # - week: 5
   #   type: "专题章节"
