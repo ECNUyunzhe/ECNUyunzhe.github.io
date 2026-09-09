@@ -9,7 +9,7 @@
         {% assign year_courses = year_group.items | sort: 'term' %}
         {% for course in year_courses %}
           <div class="col-12 mb-3">
-            <div class="card h-100 hover-shadow border-0" style="background-color: var(--global-card-bg-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div class="card h-100 hover-shadow border-0" data-dawn-course-id="{{ course.course_id | escape }}" style="background-color: var(--global-card-bg-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
               <div class="card-body">
                 
                 <h3 class="card-title mb-3">

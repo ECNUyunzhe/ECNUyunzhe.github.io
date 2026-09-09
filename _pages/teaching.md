@@ -10,3 +10,5 @@ calendar: false
 
 
 {% include courses.liquid %}
+
+<script async src="{{ '/assets/js/teaching-presentation-bridge.js' | relative_url }}"></script>
